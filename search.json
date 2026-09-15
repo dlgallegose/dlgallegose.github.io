@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "skills.html",
+    "href": "skills.html",
+    "title": "Skills & Tools",
+    "section": "",
+    "text": "Python (PyTorch, NumPy, pandas, scikit-learn)\nR\nSQL"
+  },
+  {
+    "objectID": "skills.html#programming-data",
+    "href": "skills.html#programming-data",
+    "title": "Skills & Tools",
+    "section": "",
+    "text": "Python (PyTorch, NumPy, pandas, scikit-learn)\nR\nSQL"
+  },
+  {
+    "objectID": "skills.html#machine-learning",
+    "href": "skills.html#machine-learning",
+    "title": "Skills & Tools",
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nNeural network architectures, including Kolmogorov-Arnold Networks (KANs)\nModel training, evaluation, and interpretability"
+  },
+  {
+    "objectID": "skills.html#other-tools",
+    "href": "skills.html#other-tools",
+    "title": "Skills & Tools",
+    "section": "Other Tools",
+    "text": "Other Tools\n\nGit / GitHub\nQuarto\n\n\n\n\n\n\n\nNote\n\n\n\nEdit this list to match your actual toolkit — add or remove items as needed."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Damian Gallegos",
+    "section": "",
+    "text": "I’m a PhD student in Computer Science researching machine learning, with a focus on Kolmogorov-Arnold Networks (KANs). I’m interested in building models that are both accurate and interpretable, and in understanding how new network architectures can improve on standard approaches.\n\n\n\n\nTake a look at my CV, research, or get in touch."
+  },
+  {
+    "objectID": "index.html#hi-im-damian-gallegos",
+    "href": "index.html#hi-im-damian-gallegos",
+    "title": "Damian Gallegos",
+    "section": "",
+    "text": "I’m a PhD student in Computer Science researching machine learning, with a focus on Kolmogorov-Arnold Networks (KANs). I’m interested in building models that are both accurate and interpretable, and in understanding how new network architectures can improve on standard approaches."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Email: dlgallegose@miners.utep.edu"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Download my full CV (PDF)"
+  },
+  {
+    "objectID": "cv.html#summary",
+    "href": "cv.html#summary",
+    "title": "CV",
+    "section": "Summary",
+    "text": "Summary\nI am a PhD student in Computer Science. My research focuses on machine learning, particularly Kolmogorov-Arnold Networks (KANs), and how alternative network architectures can improve model performance and interpretability.\n\n\n\n\n\n\nNote\n\n\n\nThis page is a brief on-page summary. See the downloadable PDF above for full details on education, publications, and experience."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research is in machine learning, with a primary focus on Kolmogorov-Arnold Networks (KANs) — a neural network architecture that replaces fixed activation functions on nodes with learnable activation functions on edges. I’m interested in:\n\nHow KANs compare to traditional multilayer perceptrons in accuracy and interpretability\nEfficient training and scaling of KAN-based models\nApplications of KANs to real-world prediction and forecasting problems\n\n\n\n\n\n\n\nNote\n\n\n\nThis page is a placeholder — expand it with specific projects, papers, or datasets as your research develops."
+  },
+  {
+    "objectID": "research.html#research-interests",
+    "href": "research.html#research-interests",
+    "title": "Research",
+    "section": "",
+    "text": "My research is in machine learning, with a primary focus on Kolmogorov-Arnold Networks (KANs) — a neural network architecture that replaces fixed activation functions on nodes with learnable activation functions on edges. I’m interested in:\n\nHow KANs compare to traditional multilayer perceptrons in accuracy and interpretability\nEfficient training and scaling of KAN-based models\nApplications of KANs to real-world prediction and forecasting problems\n\n\n\n\n\n\n\nNote\n\n\n\nThis page is a placeholder — expand it with specific projects, papers, or datasets as your research develops."
+  }
+]
