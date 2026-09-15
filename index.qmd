@@ -37,16 +37,17 @@ functions on edges. I'm interested in:
 
 ## Skills & Tools
 
-**Programming & Data**
-
-- Python (PyTorch, NumPy, pandas, scikit-learn)
-- R
-- SQL
-
 **Machine Learning**
 
+- ML frameworks (PyTorch, TensorFlow)
 - Neural network architectures, including Kolmogorov-Arnold Networks (KANs)
 - Model training, evaluation, and interpretability
+
+**Programming & Mobile Development**
+
+- Python
+- Dart / Flutter
+- SQL
 
 **Other Tools**
 
