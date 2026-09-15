@@ -1,0 +1,17 @@
+---
+title: "Damian Gallegos"
+---
+
+::: {layout="[35,65]"}
+![](images/headshot.jpg){.rounded fig-alt="Headshot of Damian Gallegos"}
+
+## Hi, I'm Damian Gallegos
+
+I'm a PhD student in Computer Science researching machine learning, with a
+focus on **Kolmogorov-Arnold Networks (KANs)**. I'm interested in building
+models that are both accurate and interpretable, and in understanding how
+new network architectures can improve on standard approaches.
+
+Take a look at my [CV](cv.qmd), [research](research.qmd), or
+[get in touch](contact.qmd).
+:::

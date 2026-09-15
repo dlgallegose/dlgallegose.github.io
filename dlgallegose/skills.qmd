@@ -1,0 +1,24 @@
+---
+title: "Skills & Tools"
+---
+
+## Programming & Data
+
+- Python (PyTorch, NumPy, pandas, scikit-learn)
+- R
+- SQL
+
+## Machine Learning
+
+- Neural network architectures, including Kolmogorov-Arnold Networks (KANs)
+- Model training, evaluation, and interpretability
+
+## Other Tools
+
+- Git / GitHub
+- Quarto
+
+::: {.callout-note}
+Edit this list to match your actual toolkit — add or remove items as
+needed.
+:::

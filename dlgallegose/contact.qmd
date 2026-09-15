@@ -1,0 +1,9 @@
+---
+title: "Contact"
+---
+
+**Email:** [dlgallegose@miners.utep.edu](mailto:dlgallegose@miners.utep.edu)
+
+<!-- Optional: add LinkedIn, GitHub, or ORCID links below -->
+<!-- **LinkedIn:** [linkedin.com/in/yourname](https://linkedin.com/in/yourname) -->
+<!-- **ORCID:** [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) -->
