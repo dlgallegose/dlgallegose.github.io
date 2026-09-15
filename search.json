@@ -32,7 +32,7 @@
     "href": "index.html#skills-tools",
     "title": "Damian Gallegos",
     "section": "Skills & Tools",
-    "text": "Skills & Tools\nProgramming & Data\n\nPython (PyTorch, NumPy, pandas, scikit-learn)\nR\nSQL\n\nMachine Learning\n\nNeural network architectures, including Kolmogorov-Arnold Networks (KANs)\nModel training, evaluation, and interpretability\n\nOther Tools\n\nGit / GitHub\nQuarto"
+    "text": "Skills & Tools\nMachine Learning\n\nML frameworks (PyTorch, TensorFlow)\nNeural network architectures, including Kolmogorov-Arnold Networks (KANs)\nModel training, evaluation, and interpretability\n\nProgramming & Mobile Development\n\nPython\nDart / Flutter\nSQL\n\nOther Tools\n\nGit / GitHub\nQuarto"
   },
   {
     "objectID": "index.html#contact",
