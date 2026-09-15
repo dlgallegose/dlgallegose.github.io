@@ -11,7 +11,52 @@ I'm a PhD student in Computer Science researching machine learning, with a
 focus on **Kolmogorov-Arnold Networks (KANs)**. I'm interested in building
 models that are both accurate and interpretable, and in understanding how
 new network architectures can improve on standard approaches.
-
-Take a look at my [CV](cv.qmd), [research](research.qmd), or
-[get in touch](contact.qmd).
 :::
+
+## CV
+
+[**Download my full CV (PDF)**](files/cv.pdf){.btn .btn-primary role="button"}
+
+### Education
+
+- **Ph.D. in Computer Science** (in progress) — University of Texas at El Paso
+- **M.S. in Data and Information Science** — University of Texas at El Paso
+- **B.S. in Materials Engineering** — Universidad Autónoma de Ciudad Juárez
+
+## Research Interests
+
+My research is in **machine learning**, with a primary focus on
+**Kolmogorov-Arnold Networks (KANs)** — a neural network architecture that
+replaces fixed activation functions on nodes with learnable activation
+functions on edges. I'm interested in:
+
+- How KANs compare to traditional multilayer perceptrons in accuracy and
+  interpretability
+- Efficient training and scaling of KAN-based models
+- Applications of KANs to real-world prediction and forecasting problems
+
+## Skills & Tools
+
+**Programming & Data**
+
+- Python (PyTorch, NumPy, pandas, scikit-learn)
+- R
+- SQL
+
+**Machine Learning**
+
+- Neural network architectures, including Kolmogorov-Arnold Networks (KANs)
+- Model training, evaluation, and interpretability
+
+**Other Tools**
+
+- Git / GitHub
+- Quarto
+
+## Contact
+
+**Email:** [dlgallegose@miners.utep.edu](mailto:dlgallegose@miners.utep.edu)
+
+<!-- Optional: add LinkedIn, GitHub, or ORCID links below -->
+<!-- **LinkedIn:** [linkedin.com/in/yourname](https://linkedin.com/in/yourname) -->
+<!-- **ORCID:** [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) -->

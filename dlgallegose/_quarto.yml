@@ -3,18 +3,7 @@ project:
 
 website:
   title: "Damian Gallegos"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: cv.qmd
-        text: CV
-      - href: research.qmd
-        text: Research
-      - href: skills.qmd
-        text: Skills
-      - href: contact.qmd
-        text: Contact
+  favicon: images/favicon.png
 
 format:
   html:

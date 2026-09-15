@@ -1,0 +1,34 @@
+meta:
+  name: Damian Gallegos
+
+color:
+  palette:
+    teal: "#2C7A7B"
+    coral: "#F4A261"
+    cream: "#FFFBF5"
+    slate: "#33404D"
+  foreground: slate
+  background: cream
+  primary: teal
+  secondary: coral
+  link: teal
+
+typography:
+  fonts:
+    - family: Poppins
+      source: google
+      weight: [500, 600, 700]
+    - family: Nunito
+      source: google
+      weight: [400, 600]
+  base:
+    family: Nunito
+    size: 1.05rem
+  headings:
+    family: Poppins
+    weight: 600
+  link:
+    weight: 600
+
+logo:
+  small: images/favicon.png
