@@ -4,14 +4,30 @@ project:
 website:
   title: "Damian Gallegos"
   favicon: images/favicon.png
+  page-navigation: false
+  navbar:
+    right:
+      - text: Research
+        href: index.qmd#research
+      - text: Publications
+        href: index.qmd#publications
+      - text: Experience
+        href: index.qmd#experience
+      - text: Contact
+        href: index.qmd#contact
+      - icon: github
+        href: https://github.com/dlgallegose
+        aria-label: GitHub
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: [cosmo, theme-light.scss]
+      dark: [cosmo, theme-dark.scss]
+    respect-user-color-scheme: true
     css: styles.css
-    toc: true
-
-
-
+    page-layout: custom
+    toc: false
+    smooth-scroll: true
+    include-in-header: _includes/head.html
+    include-after-body: _includes/scripts.html

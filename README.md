@@ -17,7 +17,7 @@ A single-page site covering:
 ## Built with
 
 - [Quarto](https://quarto.org) — static site generator
-- Custom theme via `_brand.yml` (colors, typography, favicon)
+- Custom light/dark theme (`theme-light.scss`, `theme-dark.scss`, `styles.css`) with small interactions in `_includes/`
 - Hosted on GitHub Pages (`gh-pages` branch)
 
 *(For my actual skills/tech stack — ML frameworks, SQL, Flutter/Dart, etc. — see the [Skills & Tools](https://dlgallegose.github.io/#skills-tools) section on the site.)*
