@@ -18,4 +18,6 @@ format:
     page-layout: custom
     toc: false
     include-in-header: _includes/head.html
-    include-after-body: _includes/scripts.html
+    include-after-body:
+      - _includes/scripts.html
+      - _includes/kan.html

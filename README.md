@@ -17,7 +17,7 @@ A single-page site covering:
 ## Built with
 
 - [Quarto](https://quarto.org) — static site generator
-- Custom theme (`theme-light.scss`, `styles.css`); tabs, copy-email and the interactive KAN spline demo in `_includes/scripts.html`
+- Custom theme (`theme-light.scss`, `styles.css`); tabs and copy-email in `_includes/scripts.html`; a small KAN trained in the browser in `_includes/kan.html`
 - Hosted on GitHub Pages (`gh-pages` branch)
 
 *(For my actual skills/tech stack — ML frameworks, SQL, Flutter/Dart, etc. — see the [Skills & Tools](https://dlgallegose.github.io/#skills-tools) section on the site.)*

@@ -29,19 +29,20 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
 :::
 
 ```{=html}
-<figure class="kan" aria-label="Interactive demo: a learnable KAN edge function">
+<figure class="kan" aria-label="Interactive demo: a small Kolmogorov-Arnold Network trained in the browser">
   <div class="kan-head">
-    <span class="kan-title">A KAN edge learns a curve</span>
-    <span class="kan-stats" aria-live="polite">step <b id="kan-step">0</b> · MSE <b id="kan-mse">–</b></span>
+    <span class="kan-title">A real KAN, trained in your browser</span>
+    <span class="kan-stats" aria-live="polite"><span id="kan-opt">untrained</span> · step <b id="kan-step">0</b> · loss <b id="kan-loss">–</b></span>
   </div>
-  <svg id="kan-svg" viewBox="0 0 320 190" role="img" aria-label="Spline curve phi of x with draggable control points"></svg>
+  <svg id="kan-net" viewBox="0 0 360 236" role="img" aria-label="KAN diagram: inputs x and y feed one hidden node, which feeds the output. Each edge shows the curve it has learned."></svg>
+  <svg id="kan-loss-svg" viewBox="0 0 360 64" role="img" aria-label="Training loss on a log scale"></svg>
+  <p class="kan-formula" id="kan-formula" aria-live="polite">Target: f(x, y) = exp(sin(πx) + y²)</p>
   <div class="kan-btns">
-    <button class="btn-x sm" data-target="sin">Fit sin(πx)</button>
-    <button class="btn-x sm" data-target="abs">Fit |x|</button>
-    <button class="btn-x sm" data-target="sq">Fit x²</button>
-    <button class="btn-x sm ghost" data-target="reset">Reset</button>
+    <button class="btn-x sm" data-opt="adam">Train with Adam</button>
+    <button class="btn-x sm" data-opt="lbfgs">Train with L-BFGS → Adam</button>
+    <button class="btn-x sm ghost" data-opt="reset">Reset</button>
   </div>
-  <figcaption>Each edge in a Kolmogorov-Arnold Network learns a 1-D function like this one. Drag the points or press Fit.</figcaption>
+  <figcaption>A [2, 1, 1] Kolmogorov-Arnold Network trained on 200 samples of f(x, y) = exp(sin(πx) + y²). Each edge learns a 1-D spline; after training, each edge is matched to a formula and the whole function is read back.<br><span class="kan-note">Toy example for illustration, not results from my papers.</span></figcaption>
 </figure>
 ```
 :::
@@ -75,7 +76,7 @@ first, tested with ablations against baselines
 ::: {.topic}
 [02]{.num}
 
-**Can we read them?** Extracting symbolic formulas from trained KANs in Julia,
+**Can we read them?** Extracting symbolic formulas from trained KANs,
 so a model can be read as an equation.
 :::
 
@@ -143,29 +144,171 @@ expected error.
 ::: {#experience .panel role="tabpanel" aria-labelledby="t-experience"}
 [Experience]{.panel-title}
 
-::: {.rows}
-[**Doctoral Researcher** · UTEP]{.r} [2025 – now]{.d}
+```{=html}
+<div class="jobs">
+  <article class="job">
+    <div class="logo">UTEP</div>
+    <div class="job-body">
+      <h3>Doctoral Researcher</h3>
+      <p class="org">The University of Texas at El Paso · Full-time</p>
+      <p class="meta">Jan 2025 – Present · El Paso, TX</p>
+      <ul>
+        <li>Proposed adaptive optimizer sequencing for KANs (L-BFGS first), validated by ablations against baselines (MICAI 2026).</li>
+        <li>Released open-source code with a reproducible experiment-tracking workflow.</li>
+        <li>Turning trained KANs into readable mathematical formulas.</li>
+        <li>Developing methods to estimate model confidence and error, including Hessian-based analysis.</li>
+      </ul>
+      <p class="job-tags"><span class="tag">PyTorch</span><span class="tag">L-BFGS</span><span class="tag">Hessian analysis</span><span class="tag">Symbolic regression</span></p>
+    </div>
+  </article>
 
-[**Graduate Teaching Assistant** · UTEP: Cross-Platform Apps (Flutter), Databases (SQL), Data Structures (Java)]{.r} [2023 – now]{.d}
+  <article class="job">
+    <div class="logo">UTEP</div>
+    <div class="job-body">
+      <h3>Graduate Teaching Assistant</h3>
+      <p class="org">The University of Texas at El Paso · Part-time</p>
+      <p class="meta">Jan 2023 – Present · El Paso, TX</p>
+      <ul>
+        <li><b>CS 4381/5381 Cross-Platform App Development</b> (Dart, Flutter) · Summer &amp; Fall 2026</li>
+        <li><b>CS 4342/5342 Database Management</b> (SQL, relational design) · Fall 2024 – Spring 2026</li>
+        <li><b>CS 2401 Data Structures and Algorithms</b> (Java) · Spring &amp; Fall 2023, leading two lab sections</li>
+      </ul>
+      <p class="job-tags"><span class="tag">Dart / Flutter</span><span class="tag">SQL</span><span class="tag">Java</span><span class="tag">Teaching</span></p>
+    </div>
+  </article>
 
-[**Data Science Intern** · North American Development Bank: risk-flagging system from climate, financial and geospatial data]{.r} [2024]{.d}
+  <article class="job">
+    <div class="logo">NADB</div>
+    <div class="job-body">
+      <h3>Data Science Intern</h3>
+      <p class="org">North American Development Bank · Internship</p>
+      <p class="meta">May 2024 – Aug 2024 · El Paso, TX</p>
+      <ul>
+        <li>Built a Python system fusing climate, financial, and geospatial data to flag project risk early.</li>
+        <li>Automated managers' project-status reporting with Power BI dashboards, cutting the time it took by 80%.</li>
+      </ul>
+      <p class="job-tags"><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">Geospatial data</span></p>
+    </div>
+  </article>
 
-[**Graduate Research Assistant** · UTEP: deep learning for urban water-use prediction]{.r} [2024]{.d}
+  <article class="job">
+    <div class="logo">UTEP</div>
+    <div class="job-body">
+      <h3>Graduate Research Assistant</h3>
+      <p class="org">The University of Texas at El Paso</p>
+      <p class="meta">Jan 2024 – Aug 2024 · El Paso, TX</p>
+      <ul>
+        <li>Built deep learning models to predict urban water use in semi-arid regions; this work led to two MICAI papers and my M.S. thesis.</li>
+      </ul>
+      <p class="job-tags"><span class="tag">Deep learning</span><span class="tag">Time series</span><span class="tag">TensorFlow</span></p>
+    </div>
+  </article>
 
-[**Test Engineer** · Foxconn: automated server testing with Python and Bash]{.r} [2021 – 22]{.d}
-:::
+  <article class="job">
+    <div class="logo">FXN</div>
+    <div class="job-body">
+      <h3>Test Engineer</h3>
+      <p class="org">Foxconn · Full-time</p>
+      <p class="meta">Dec 2021 – Aug 2022 · El Paso, TX</p>
+      <ul>
+        <li>Automated server testing and failure analysis using Python and Bash.</li>
+        <li>Troubleshot hardware and software failures across multi-step server test pipelines.</li>
+      </ul>
+      <p class="job-tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">Linux</span></p>
+    </div>
+  </article>
+
+  <details class="earlier">
+    <summary><i class="bi bi-chevron-down chev"></i> Earlier: materials science research &amp; industry (2018 – 2021)</summary>
+
+    <article class="job">
+      <div class="logo">TG</div>
+      <div class="job-body">
+        <h3>Production Supervisor</h3>
+        <p class="org">The TECMA Group</p>
+        <p class="meta">2021 · Ciudad Juárez / El Paso</p>
+        <ul>
+          <li>Increased production output by 25% through data-driven decisions, design of experiments (DOE) and agile methods.</li>
+          <li>Introduced visual aids to standardize work on the floor.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="logo">UACJ</div>
+      <div class="job-body">
+        <h3>Research Assistant Intern</h3>
+        <p class="org">Universidad Autónoma de Ciudad Juárez</p>
+        <p class="meta">Aug 2020 – May 2021 · Ciudad Juárez</p>
+        <ul>
+          <li>Semiconductor powder and metallic synthesis; XRD and I–V characterization.</li>
+          <li>Nanofilm fabrication by sputtering, PVD, CVD and ALD.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="logo">UACJ</div>
+      <div class="job-body">
+        <h3>Undergraduate Research Assistant</h3>
+        <p class="org">Universidad Autónoma de Ciudad Juárez</p>
+        <p class="meta">Jan 2018 – Jan 2020 · Ciudad Juárez</p>
+        <ul>
+          <li>In-situ viscosity measurement in sintering-forging furnaces and dilatometry; ceramic powder synthesis; SEM/EDS/XRD analysis.</li>
+          <li>Battery-recycling project (Jan – Aug 2018): recovering ZnO from spent batteries for dye-sensitized solar cells.</li>
+        </ul>
+      </div>
+    </article>
+  </details>
+</div>
+```
 :::
 
 ::: {#education .panel role="tabpanel" aria-labelledby="t-education"}
 [Education]{.panel-title}
 
-::: {.rows}
-[**Ph.D. Computer Science** · The University of Texas at El Paso · GPA 4.00]{.r} [2025 – now]{.d}
+```{=html}
+<div class="jobs">
+  <article class="job">
+    <div class="logo">UTEP</div>
+    <div class="job-body">
+      <h3>The University of Texas at El Paso</h3>
+      <p class="org">Ph.D., Computer Science · GPA 4.00</p>
+      <p class="meta">Jan 2025 – Present</p>
+      <ul>
+        <li>Research: uncertainty and error estimation in neural networks, focused on Kolmogorov-Arnold Networks.</li>
+      </ul>
+      <p class="job-tags"><span class="tag">KANs</span><span class="tag">Uncertainty quantification</span><span class="tag">Optimization</span></p>
+    </div>
+  </article>
 
-[**M.S. Data and Information Science** · The University of Texas at El Paso · GPA 3.72]{.r} [2024]{.d}
+  <article class="job">
+    <div class="logo">UTEP</div>
+    <div class="job-body">
+      <h3>The University of Texas at El Paso</h3>
+      <p class="org">M.S., Data and Information Science · GPA 3.72</p>
+      <p class="meta">Aug 2022 – Dec 2024</p>
+      <ul>
+        <li>Thesis: machine learning for water-use prediction (advisor: Natalia Villanueva-Rosales).</li>
+      </ul>
+      <p class="job-tags"><span class="tag">Machine learning</span><span class="tag">Deep learning</span><span class="tag">Databases</span></p>
+    </div>
+  </article>
 
-[**B.S. Materials Engineering** · Universidad Autónoma de Ciudad Juárez · GPA 3.88]{.r} [2021]{.d}
-:::
+  <article class="job">
+    <div class="logo">UACJ</div>
+    <div class="job-body">
+      <h3>Universidad Autónoma de Ciudad Juárez</h3>
+      <p class="org">B.S., Materials Engineering · GPA 3.88</p>
+      <p class="meta">Aug 2017 – May 2021</p>
+      <ul>
+        <li>Undergraduate research in ceramics, semiconductors and thin films.</li>
+      </ul>
+      <p class="job-tags"><span class="tag">Materials characterization</span><span class="tag">Design of experiments</span></p>
+    </div>
+  </article>
+</div>
+```
 :::
 
 :::
