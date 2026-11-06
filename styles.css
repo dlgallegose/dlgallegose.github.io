@@ -226,7 +226,7 @@ html.tabs-on .panel { animation: fade 0.3s ease; }
 /* ===== v4: header widget, skills, sliding tabs, smooth accordion ===== */
 :root { interpolate-size: allow-keywords; }
 .site { max-width: 1120px; }
-.masthead { grid-template-columns: 128px minmax(0, 1fr) 360px; gap: 28px; }
+.masthead { grid-template-columns: 128px minmax(0, 1fr) 390px; gap: 28px; }
 .portrait { width: 128px; height: 156px; }
 @media (max-width: 1000px) {
   .masthead { grid-template-columns: 128px minmax(0, 1fr); }
@@ -293,3 +293,54 @@ html.tabs-on .tab-x:not([aria-selected="true"]):hover { color: var(--blue); }
   transition: height 0.28s ease, content-visibility 0.28s allow-discrete;
 }
 .pub[open]::details-content { height: auto; }
+
+/* ===== v5: real KAN demo ===== */
+#kan-net, #kan-loss-svg { width: 100%; height: auto; display: block; touch-action: manipulation; }
+#kan-net { margin-top: 6px; }
+#kan-net .edge { stroke: #c9d6ea; stroke-width: 1.5; }
+#kan-net .ebox { fill: #f8fafe; stroke: var(--rule); }
+#kan-net .ecurve { fill: none; stroke: var(--blue); stroke-width: 2; stroke-linejoin: round; }
+#kan-net .node { fill: #fff; stroke: var(--blue); stroke-width: 2; }
+#kan-net .node.hid { fill: var(--blue); }
+#kan-net .nlbl { font-family: var(--mono); font-size: 10px; fill: var(--blue); font-weight: 500; }
+#kan-net .ename { font-family: var(--mono); font-size: 9.5px; fill: var(--muted); }
+#kan-net .esym { font-family: var(--mono); font-size: 9.5px; fill: var(--blue); font-weight: 500; }
+#kan-loss-svg { margin: 4px 0 2px; border-top: 1px solid var(--rule); padding-top: 4px; }
+#kan-loss-svg .lgrid { stroke: #eef2f8; }
+#kan-loss-svg .llbl { font-family: var(--mono); font-size: 8.5px; fill: var(--muted); }
+#kan-loss-svg .lcurve { fill: none; stroke: var(--blue); stroke-width: 1.8; }
+.kan-formula { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); margin: 4px 0 8px !important; min-height: 2.4em; }
+.kan-formula.found { color: var(--blue-dark); background: var(--blue-soft); padding: 6px 8px; border-radius: 6px; }
+.kan-note { font-style: italic; }
+.kan-btns .btn-x:disabled { opacity: 0.5; cursor: progress; }
+
+/* ===== v5: LinkedIn-style experience & education ===== */
+.jobs { display: flex; flex-direction: column; }
+.job { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.jobs > .job:first-child { padding-top: 4px; }
+.logo {
+  width: 48px; height: 48px; border-radius: 8px;
+  display: grid; place-items: center;
+  background: var(--blue-soft); color: var(--blue-dark);
+  font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.02em;
+}
+.job h3 { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 0 0 1px; }
+.job .org { margin: 0; font-size: 0.9rem; }
+.job .meta { margin: 0 0 6px; font-size: 0.82rem; color: var(--muted); }
+.job ul { margin: 4px 0 6px; padding-left: 1.1em; font-size: 0.9rem; }
+.job li { margin-bottom: 3px; }
+.job li::marker { color: var(--blue); }
+.job-tags { margin: 6px 0 0 !important; display: flex; flex-wrap: wrap; gap: 5px; }
+.job-tags .tag { margin: 0; font-size: 0.75rem; padding: 2px 8px; }
+.earlier { margin-top: 4px; }
+.earlier > summary {
+  list-style: none; cursor: pointer; padding: 12px 6px; font-size: 0.9rem; font-weight: 500; color: var(--blue);
+  border-radius: 6px; transition: background 0.15s ease;
+}
+.earlier > summary::-webkit-details-marker { display: none; }
+.earlier > summary:hover { background: var(--blue-soft); }
+.earlier[open] > summary .chev { transform: rotate(180deg); }
+.earlier .chev { display: inline-block; transition: transform 0.2s ease; }
+.earlier::details-content { height: 0; overflow: hidden; transition: height 0.3s ease, content-visibility 0.3s allow-discrete; }
+.earlier[open]::details-content { height: auto; }
+@media (max-width: 640px) { .job { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; } .logo { width: 40px; height: 40px; font-size: 0.6rem; } }
