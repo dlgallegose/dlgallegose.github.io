@@ -211,20 +211,39 @@ ul.task-list li input[type="checkbox"] {
 
 <script>
 (function () {
-  // Tabs
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Tabs with sliding indicator ---------- */
+  var bar = document.querySelector('.tabs-x');
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-x'));
   var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+  var ind = null;
+  var current = 0;
+  function moveInd() {
+    if (!ind || !tabs[current]) return;
+    var t = tabs[current];
+    ind.style.width = t.offsetWidth + 'px';
+    ind.style.transform = 'translate(' + t.offsetLeft + 'px,' + (t.offsetTop - 6) + 'px)';
+    ind.style.height = t.offsetHeight + 'px';
+    ind.style.bottom = 'auto';
+  }
   function show(i, focus) {
+    current = i;
     tabs.forEach(function (t, j) {
       var on = i === j;
       t.setAttribute('aria-selected', on ? 'true' : 'false');
       t.tabIndex = on ? 0 : -1;
       if (panels[j]) panels[j].hidden = !on;
     });
+    moveInd();
     if (focus) tabs[i].focus();
   }
-  if (tabs.length && panels.every(Boolean)) {
+  if (bar && tabs.length && panels.every(Boolean)) {
     document.documentElement.classList.add('tabs-on');
+    ind = document.createElement('span');
+    ind.className = 'tab-ind';
+    ind.setAttribute('aria-hidden', 'true');
+    bar.insertBefore(ind, bar.firstChild);
     tabs.forEach(function (t, i) {
       t.addEventListener('click', function () {
         show(i);
@@ -235,13 +254,18 @@ ul.task-list li input[type="checkbox"] {
         if (e.key === 'ArrowLeft') show((i - 1 + tabs.length) % tabs.length, true);
       });
     });
-    var start = 0;
-    var h = location.hash.slice(1);
+    var start = 0, h = location.hash.slice(1);
     tabs.forEach(function (t, i) { if (t.getAttribute('aria-controls') === h) start = i; });
+    var prev = ind.style.transition;
+    ind.style.transition = 'none';
     show(start);
+    ind.offsetWidth;
+    ind.style.transition = prev;
+    window.addEventListener('resize', moveInd);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveInd);
   }
 
-  // Copy email
+  /* ---------- Copy email ---------- */
   var btn = document.querySelector('.copy-email');
   if (btn) {
     btn.addEventListener('click', function () {
@@ -259,6 +283,165 @@ ul.task-list li input[type="checkbox"] {
       }
     });
   }
+
+  /* ---------- KAN edge demo: cubic B-spline fitted by gradient descent ---------- */
+  var svg = document.getElementById('kan-svg');
+  if (!svg) return;
+  var NS = 'http://www.w3.org/2000/svg';
+  var W = 320, H = 190, PADX = 18, PADY = 14, YMAX = 1.25;
+  var N = 8, SAMPLES = 120;
+  var init = [0.0, 0.55, -0.35, 0.25, 0.7, -0.2, 0.4, -0.5];
+  var cy = init.slice();
+  var cx = [];
+  for (var k = 0; k < N; k++) cx.push(-1 + 2 * k / (N - 1));
+
+  function sx(x) { return PADX + (x + 1) / 2 * (W - 2 * PADX); }
+  function sy(y) { return H / 2 - y / YMAX * (H / 2 - PADY); }
+  function iy(py) { return (H / 2 - py) / (H / 2 - PADY) * YMAX; }
+
+  // Basis matrix: curve(t_i) = sum_j B[i][j] * c_j, clamped by repeating end points.
+  function basisRow(u) {
+    var pad = [0, 0].concat(range(N)).concat([N - 1, N - 1]);
+    var segs = pad.length - 3;
+    var s = Math.min(Math.floor(u * segs), segs - 1);
+    var t = u * segs - s;
+    var b = [(1 - t) * (1 - t) * (1 - t) / 6,
+             (3 * t * t * t - 6 * t * t + 4) / 6,
+             (-3 * t * t * t + 3 * t * t + 3 * t + 1) / 6,
+             t * t * t / 6];
+    var row = new Array(N).fill(0);
+    for (var m = 0; m < 4; m++) row[pad[s + m]] += b[m];
+    return row;
+  }
+  function range(n) { var a = []; for (var i = 0; i < n; i++) a.push(i); return a; }
+  var B = [], XS = [];
+  for (var i = 0; i < SAMPLES; i++) {
+    var row = basisRow(i / (SAMPLES - 1));
+    B.push(row);
+    var x = 0; for (var j = 0; j < N; j++) x += row[j] * cx[j];
+    XS.push(x);
+  }
+  function curveY() {
+    return B.map(function (r) { var y = 0; for (var j = 0; j < N; j++) y += r[j] * cy[j]; return y; });
+  }
+
+  // Step size from the largest eigenvalue of (2/N) B^T B (power iteration)
+  var G = [];
+  for (var a = 0; a < N; a++) { G.push([]); for (var b2 = 0; b2 < N; b2++) { var s2 = 0; for (var r = 0; r < SAMPLES; r++) s2 += B[r][a] * B[r][b2]; G[a].push(2 * s2 / SAMPLES); } }
+  var v = new Array(N).fill(1), lam = 1;
+  for (var it = 0; it < 50; it++) {
+    var w = G.map(function (row) { var s = 0; for (var j = 0; j < N; j++) s += row[j] * v[j]; return s; });
+    lam = Math.sqrt(w.reduce(function (s, q) { return s + q * q; }, 0));
+    v = w.map(function (q) { return q / lam; });
+  }
+  var LR = 1.0 / lam;
+
+  var targets = {
+    sin: function (x) { return Math.sin(Math.PI * x); },
+    abs: function (x) { return Math.abs(x); },
+    sq: function (x) { return x * x; }
+  };
+  var target = null, step = 0, anim = null;
+
+  // Build static SVG layers
+  function el(name, attrs, parent) {
+    var e = document.createElementNS(NS, name);
+    for (var key in attrs) e.setAttribute(key, attrs[key]);
+    (parent || svg).appendChild(e);
+    return e;
+  }
+  [-1, -0.5, 0.5, 1].forEach(function (g) { el('line', { x1: sx(-1), x2: sx(1), y1: sy(g), y2: sy(g), class: 'grid' }); });
+  el('line', { x1: sx(-1), x2: sx(1), y1: sy(0), y2: sy(0), class: 'axis' });
+  el('line', { x1: sx(0), x2: sx(0), y1: PADY - 4, y2: H - PADY + 4, class: 'axis' });
+  var lx = el('text', { x: W - PADX, y: sy(0) - 4, 'text-anchor': 'end', class: 'lbl' }); lx.textContent = 'x';
+  var ly = el('text', { x: sx(0) + 4, y: PADY + 2, class: 'lbl' }); ly.textContent = 'φ(x)';
+  var targetPath = el('path', { class: 'target', d: '' });
+  var poly = el('polyline', { class: 'poly' });
+  var curve = el('path', { class: 'curve' });
+  var pts = cx.map(function (x, j) {
+    var c = el('circle', { r: 6, class: 'pt', tabindex: 0, 'aria-label': 'Control point ' + (j + 1) + ', drag or use arrow keys' });
+    c.dataset.j = j;
+    return c;
+  });
+  var stepEl = document.getElementById('kan-step'), mseEl = document.getElementById('kan-mse');
+
+  function mse(ys) {
+    if (!target) return null;
+    var s = 0; for (var i = 0; i < SAMPLES; i++) { var d = ys[i] - target(XS[i]); s += d * d; }
+    return s / SAMPLES;
+  }
+  function draw() {
+    var ys = curveY();
+    curve.setAttribute('d', ys.map(function (y, i) { return (i ? 'L' : 'M') + sx(XS[i]).toFixed(1) + ' ' + sy(y).toFixed(1); }).join(''));
+    poly.setAttribute('points', cx.map(function (x, j) { return sx(x) + ',' + sy(cy[j]); }).join(' '));
+    pts.forEach(function (c, j) { c.setAttribute('cx', sx(cx[j])); c.setAttribute('cy', sy(cy[j])); });
+    targetPath.setAttribute('d', target ? XS.map(function (x, i) { return (i ? 'L' : 'M') + sx(x).toFixed(1) + ' ' + sy(target(x)).toFixed(1); }).join('') : '');
+    var m = mse(ys);
+    stepEl.textContent = step;
+    mseEl.textContent = m === null ? '–' : m.toFixed(4);
+  }
+  function gdStep() {
+    var ys = curveY();
+    var grad = new Array(N).fill(0);
+    for (var i = 0; i < SAMPLES; i++) {
+      var d = 2 * (ys[i] - target(XS[i])) / SAMPLES;
+      for (var j = 0; j < N; j++) grad[j] += d * B[i][j];
+    }
+    for (var j2 = 0; j2 < N; j2++) cy[j2] = Math.max(-YMAX, Math.min(YMAX, cy[j2] - LR * grad[j2]));
+    step++;
+  }
+  function stop() { if (anim) cancelAnimationFrame(anim); anim = null; }
+  function fit(name) {
+    stop();
+    target = targets[name];
+    var total = 600, perFrame = 6;
+    if (reduce) { for (var q = 0; q < total; q++) gdStep(); draw(); return; }
+    var done = 0;
+    (function frame() {
+      for (var q = 0; q < perFrame && done < total; q++, done++) gdStep();
+      draw();
+      if (done < total) anim = requestAnimationFrame(frame); else anim = null;
+    })();
+  }
+  var fitBtns = Array.prototype.slice.call(document.querySelectorAll('.kan-btns .btn-x'));
+  fitBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-target');
+      fitBtns.forEach(function (o) { o.classList.toggle('on', o === b && t !== 'reset'); });
+      if (t === 'reset') { stop(); cy = init.slice(); target = null; step = 0; draw(); return; }
+      step = 0;
+      fit(t);
+    });
+  });
+
+  // Dragging (mouse + touch via pointer events) and keyboard
+  var dragJ = -1;
+  function toSvgY(evt) {
+    var p = svg.createSVGPoint(); p.x = evt.clientX; p.y = evt.clientY;
+    return p.matrixTransform(svg.getScreenCTM().inverse()).y;
+  }
+  pts.forEach(function (c) {
+    c.addEventListener('pointerdown', function (e) {
+      stop(); dragJ = +c.dataset.j; c.classList.add('drag');
+      svg.setPointerCapture(e.pointerId); e.preventDefault();
+    });
+    c.addEventListener('keydown', function (e) {
+      var j = +c.dataset.j, d = 0;
+      if (e.key === 'ArrowUp') d = 0.05; else if (e.key === 'ArrowDown') d = -0.05; else return;
+      e.preventDefault(); stop();
+      cy[j] = Math.max(-YMAX, Math.min(YMAX, cy[j] + d)); draw();
+    });
+  });
+  svg.addEventListener('pointermove', function (e) {
+    if (dragJ < 0) return;
+    cy[dragJ] = Math.max(-YMAX, Math.min(YMAX, iy(toSvgY(e))));
+    draw();
+  });
+  function endDrag() { if (dragJ >= 0) pts[dragJ].classList.remove('drag'); dragJ = -1; }
+  svg.addEventListener('pointerup', endDrag);
+  svg.addEventListener('pointercancel', endDrag);
+
+  draw();
 })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
