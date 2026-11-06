@@ -1,66 +1,52 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Damian Gallegos",
-    "section": "",
-    "text": "I’m a Ph.D. student in Computer Science at The University of Texas at El Paso working on trustworthy machine learning: quantifying uncertainty and estimating error in neural networks, with a focus on Kolmogorov-Arnold Networks (KANs).\n\n\n\n\nEmail · GitHub · ORCID · CV (PDF)"
-  },
-  {
-    "objectID": "index.html#hi-im-damian-gallegos",
-    "href": "index.html#hi-im-damian-gallegos",
-    "title": "Damian Gallegos",
-    "section": "",
-    "text": "I’m a Ph.D. student in Computer Science at The University of Texas at El Paso working on trustworthy machine learning: quantifying uncertainty and estimating error in neural networks, with a focus on Kolmogorov-Arnold Networks (KANs)."
-  },
-  {
     "objectID": "index.html#research",
     "href": "index.html#research",
     "title": "Damian Gallegos",
     "section": "Research",
-    "text": "Research\nMy research is in machine learning, with a primary focus on Kolmogorov-Arnold Networks (KANs), a neural network architecture that replaces fixed activation functions on nodes with learnable activation functions on edges. Current work:\n\nOptimization for KANs. Adaptive optimizer sequencing (L-BFGS first), validated with ablations against baselines, with open-source code.\nInterpretability. Turning trained KANs into readable mathematical formulas (Julia), so a model can be inspected rather than just trusted.\nConfidence and error estimation. Methods to estimate how confident a model is and how wrong it is likely to be, including Hessian-based analysis."
+    "text": "Research\nMy research is in machine learning, with a primary focus on Kolmogorov-Arnold Networks, a neural network architecture that replaces fixed activation functions on nodes with learnable activation functions on edges.\n\n\n\n\nOptimization for KANs\nAdaptive optimizer sequencing (L-BFGS first), validated with ablations against baselines, with open-source code.\n\n\n\n\n\nInterpretability\nTurning trained KANs into readable mathematical formulas (Julia), so a model can be inspected rather than just trusted.\n\n\n\n\n\nConfidence & error estimation\nMethods to estimate how confident a model is and how wrong it is likely to be, including Hessian-based analysis."
   },
   {
     "objectID": "index.html#publications",
     "href": "index.html#publications",
     "title": "Damian Gallegos",
     "section": "Publications",
-    "text": "Publications\n\nD. L. Gallegos Espinoza, Y. I. Guel, M. N. Sojib, M. Ceberio. Adaptive Optimizer Sequencing for Kolmogorov-Arnold Networks. Advances in Soft Computing (MICAI 2026), LNAI vol. 17149, Springer, 2027. [DOI] [Code]\nM. N. Sojib, D. L. Gallegos Espinoza, M. Ceberio. FedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning. Advances in Soft Computing (MICAI 2026), LNAI vol. 17149, Springer, 2027. [DOI]\nD. L. Gallegos Espinoza, O. Kosheleva, V. Kreinovich. Why Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning. Data Science in Finance and Accounting, Studies in Big Data vol. 181, Springer, 2026. [DOI]\nD. L. Gallegos Espinoza, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez. Urban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning. Advances in Soft Computing (MICAI 2025), LNCS, Springer, 2025, pp. 86-99. [DOI]\nD. L. Gallegos Espinoza et al. Towards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach. MICAI 2024, LNCS vol. 15246, Springer, 2025. [DOI]\nAnomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach. Springer, 2023."
+    "text": "Publications\n\n  All\n  KANs\n  Uncertainty & theory\n  Federated learning\n  ML for water\n\n\n\n2026\nAdaptive Optimizer Sequencing for Kolmogorov-Arnold Networks\nD. L. Gallegos Espinoza, Y. I. Guel, M. N. Sojib, M. Ceberio\nAdvances in Soft Computing (MICAI 2026), LNAI vol. 17149, Springer, 2027\nDOI  Code \n\n\n2026\nFedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning\nM. N. Sojib, D. L. Gallegos Espinoza, M. Ceberio\nAdvances in Soft Computing (MICAI 2026), LNAI vol. 17149, Springer, 2027\nDOI \n\n\n2026\nWhy Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning\nD. L. Gallegos Espinoza, O. Kosheleva, V. Kreinovich\nData Science in Finance and Accounting, Studies in Big Data vol. 181, Springer, 2026\nDOI \n\n\n2025\nUrban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning\nD. L. Gallegos Espinoza, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez\nAdvances in Soft Computing (MICAI 2025), LNCS, Springer, 2025, pp. 86–99\nDOI \n\n\n2025\nTowards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach\nD. L. Gallegos Espinoza et al.\nMICAI 2024, LNCS vol. 15246, Springer, 2025\nDOI \n\n\n2023\nAnomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach\nA. De La Peña, D. L. Gallegos Espinoza, V. Kreinovich\nUncertainty, Constraints, and Decision Making, Studies in Systems, Decision and Control, Springer, 2023, pp. 295–299\nDOI"
   },
   {
-    "objectID": "index.html#cv",
-    "href": "index.html#cv",
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
     "title": "Damian Gallegos",
-    "section": "CV",
-    "text": "CV\nDownload my full CV (PDF)\n\nEducation\n\nPh.D. in Computer Science, The University of Texas at El Paso, 2025 – present (GPA 4.00)\nM.S. in Data and Information Science, The University of Texas at El Paso, 2024 (GPA 3.72). Thesis: machine learning for water-use prediction.\nB.S. in Materials Engineering, Universidad Autónoma de Ciudad Juárez, 2021 (GPA 3.88)\n\n\n\nExperience\n\nDoctoral Researcher, UTEP, Jan 2025 – present\nGraduate Teaching Assistant, UTEP, 2023 – present\n\nCS 4381/5381 Cross-Platform App Development (Dart, Flutter), Summer and Fall 2026\nCS 4342/5342 Database Management (SQL), Fall 2024 – Spring 2026\nCS 2401 Data Structures and Algorithms (Java), Spring and Fall 2023\n\nData Science Intern, North American Development Bank, May – Aug 2024. Built a Python system fusing climate, financial, and geospatial data to flag project risk early; automated project-status reporting with Power BI (80% less time).\nGraduate Research Assistant, UTEP, Jan – Aug 2024. Deep learning models for urban water-use prediction.\nTest Engineer, Foxconn, Dec 2021 – Aug 2022. Automated server testing and failure analysis with Python and Bash."
+    "section": "Experience",
+    "text": "Experience\n\n\nJan 2025 – present\nDoctoral Researcher UTEP\nTrustworthy ML and Kolmogorov-Arnold Networks.\n\n\n2023 – present\nGraduate Teaching Assistant UTEP\nCross-Platform App Development (Dart, Flutter), Database Management (SQL), and Data Structures and Algorithms (Java).\n\n\nMay – Aug 2024\nData Science Intern North American Development Bank\nBuilt a Python system fusing climate, financial, and geospatial data to flag project risk early; automated project-status reporting with Power BI (80% less time).\n\n\nJan – Aug 2024\nGraduate Research Assistant UTEP\nDeep learning models for urban water-use prediction.\n\n\nDec 2021 – Aug 2022\nTest Engineer Foxconn\nAutomated server testing and failure analysis with Python and Bash."
   },
   {
-    "objectID": "index.html#skills-tools",
-    "href": "index.html#skills-tools",
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Damian Gallegos",
+    "section": "Education",
+    "text": "Education\n\n\nPh.D. · 2025 – present\n\nComputer Science\nThe University of Texas at El Paso · GPA 4.00\n\n\n\nM.S. · 2024\n\nData and Information Science\nThe University of Texas at El Paso · GPA 3.72 Thesis: machine learning for water-use prediction\n\n\n\nB.S. · 2021\n\nMaterials Engineering\nUniversidad Autónoma de Ciudad Juárez · GPA 3.88"
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
     "title": "Damian Gallegos",
     "section": "Skills & Tools",
-    "text": "Skills & Tools\nMachine Learning & Statistics\n\nUncertainty quantification, probabilistic modeling, interpretable/symbolic ML, federated learning\nOptimization: second-order methods (L-BFGS), Hessian analysis, optimizer scheduling\nExperimentation: ablations, baselines and metrics, reproducible pipelines\n\nProgramming\n\nPython (PyTorch, TensorFlow, scikit-learn, NumPy)\nJulia\nJava, SQL, Dart / Flutter\n\nOther Tools\n\nGit / GitHub, Linux, LaTeX, Quarto"
+    "text": "Skills & Tools\n\n\nMachine learning & statistics\nUncertainty quantification Probabilistic modeling Interpretable / symbolic ML Federated learning L-BFGS & second-order methods Hessian analysis Ablations & reproducible pipelines\n\n\nProgramming\nPython PyTorch TensorFlow scikit-learn NumPy Julia Java SQL Dart / Flutter\n\n\nTools\nGit / GitHub Linux LaTeX Quarto"
   },
   {
     "objectID": "index.html#contact",
     "href": "index.html#contact",
     "title": "Damian Gallegos",
     "section": "Contact",
-    "text": "Contact\nEmail: dlgallegose@miners.utep.edu GitHub: github.com/dlgallegose ORCID: 0009-0002-8351-9977"
-  },
-  {
-    "objectID": "dlgallegose.github.io/index.html",
-    "href": "dlgallegose.github.io/index.html",
-    "title": "Damian Gallegos",
-    "section": "",
-    "text": "I’m a PhD student in Computer Science researching machine learning, with a focus on Kolmogorov-Arnold Networks (KANs). I’m interested in building models that are both accurate and interpretable, and in understanding how new network architectures can improve on standard approaches."
+    "text": "Contact\n\nI’m always happy to talk about research and collaborations.\n\n  \n  dlgallegose@miners.utep.edu\n  Click to copy\n\n github.com/dlgallegose  ORCID 0009-0002-8351-9977"
   },
   {
     "objectID": "dlgallegose.github.io/index.html#hi-im-damian-gallegos",
     "href": "dlgallegose.github.io/index.html#hi-im-damian-gallegos",
     "title": "Damian Gallegos",
-    "section": "",
-    "text": "I’m a PhD student in Computer Science researching machine learning, with a focus on Kolmogorov-Arnold Networks (KANs). I’m interested in building models that are both accurate and interpretable, and in understanding how new network architectures can improve on standard approaches."
+    "section": "Hi, I’m Damian Gallegos",
+    "text": "Hi, I’m Damian Gallegos\nI’m a PhD student in Computer Science researching machine learning, with a focus on Kolmogorov-Arnold Networks (KANs). I’m interested in building models that are both accurate and interpretable, and in understanding how new network architectures can improve on standard approaches."
   },
   {
     "objectID": "dlgallegose.github.io/index.html#cv",
