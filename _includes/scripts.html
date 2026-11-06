@@ -1,32 +1,45 @@
 <script>
 (function () {
-  // Publication filters
-  var chips = document.querySelectorAll('.chip');
-  var pubs = document.querySelectorAll('.pub');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var f = chip.getAttribute('data-filter');
-      chips.forEach(function (c) {
-        c.classList.toggle('active', c === chip);
-        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+  // Tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-x'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+  function show(i, focus) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (panels[j]) panels[j].hidden = !on;
+    });
+    if (focus) tabs[i].focus();
+  }
+  if (tabs.length && panels.every(Boolean)) {
+    document.documentElement.classList.add('tabs-on');
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () {
+        show(i);
+        history.replaceState(null, '', '#' + t.getAttribute('aria-controls'));
       });
-      pubs.forEach(function (p) {
-        var tags = (p.getAttribute('data-tags') || '').split(' ');
-        p.classList.toggle('hidden', f !== 'all' && tags.indexOf(f) === -1);
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') show((i + 1) % tabs.length, true);
+        if (e.key === 'ArrowLeft') show((i - 1 + tabs.length) % tabs.length, true);
       });
     });
-  });
+    var start = 0;
+    var h = location.hash.slice(1);
+    tabs.forEach(function (t, i) { if (t.getAttribute('aria-controls') === h) start = i; });
+    show(start);
+  }
 
   // Copy email
   var btn = document.querySelector('.copy-email');
   if (btn) {
     btn.addEventListener('click', function () {
       var email = btn.getAttribute('data-email');
-      var hint = btn.querySelector('.copy-hint');
+      var label = btn.querySelector('.copy-label');
       var done = function () {
         btn.classList.add('copied');
-        hint.textContent = 'copied';
-        setTimeout(function () { btn.classList.remove('copied'); hint.textContent = 'copy'; }, 1600);
+        label.textContent = 'Email copied';
+        setTimeout(function () { btn.classList.remove('copied'); label.textContent = 'Email'; }, 1800);
       };
       if (navigator.clipboard) {
         navigator.clipboard.writeText(email).then(done, function () { window.location.href = 'mailto:' + email; });

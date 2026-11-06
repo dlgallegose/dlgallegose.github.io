@@ -15,137 +15,140 @@ pagetitle: "Damian Gallegos"
 I study uncertainty and error estimation in neural networks, with a focus on
 Kolmogorov-Arnold Networks (KANs).
 
-::: {.links}
-`<button class="copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address">dlgallegose@miners.utep.edu <span class="copy-hint">copy</span></button>`{=html}
-[GitHub](https://github.com/dlgallegose)
-[ORCID](https://orcid.org/0009-0002-8351-9977)
-[CV (PDF)](files/cv.pdf)
+```{=html}
+<div class="actions">
+  <a class="btn-x primary" href="files/cv.pdf"><i class="bi bi-file-earmark-text"></i> CV</a>
+  <button class="btn-x copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address"><i class="bi bi-envelope"></i> <span class="copy-label">Email</span></button>
+  <a class="btn-x" href="https://github.com/dlgallegose"><i class="bi bi-github"></i> GitHub</a>
+  <a class="btn-x" href="https://orcid.org/0009-0002-8351-9977"><i class="bi bi-person-vcard"></i> ORCID</a>
+</div>
+```
 :::
 :::
-:::
-
-::: {.body}
-
-::: {.main}
-
-## Publications {#publications}
 
 ```{=html}
-<div class="filters" role="group" aria-label="Filter publications by topic">
-  <button class="chip active" data-filter="all" aria-pressed="true">All</button>
-  <button class="chip" data-filter="kan" aria-pressed="false">KANs</button>
-  <button class="chip" data-filter="uncertainty" aria-pressed="false">Uncertainty</button>
-  <button class="chip" data-filter="federated" aria-pressed="false">Federated learning</button>
-  <button class="chip" data-filter="water" aria-pressed="false">ML for water</button>
+<div class="tabs-x" role="tablist" aria-label="Sections">
+  <button role="tab" class="tab-x" id="t-research" aria-controls="research" aria-selected="true">Research</button>
+  <button role="tab" class="tab-x" id="t-publications" aria-controls="publications" aria-selected="false">Publications <span class="count">6</span></button>
+  <button role="tab" class="tab-x" id="t-experience" aria-controls="experience" aria-selected="false">Experience</button>
+  <button role="tab" class="tab-x" id="t-education" aria-controls="education" aria-selected="false">Education &amp; Tools</button>
 </div>
 ```
 
-::: {.pub data-tags="kan"}
-[2026]{.pub-year}
+::: {#research .panel role="tabpanel" aria-labelledby="t-research"}
+[Research]{.panel-title}
 
-[Adaptive Optimizer Sequencing for Kolmogorov-Arnold Networks]{.pub-title}
+My work is on **Kolmogorov-Arnold Networks**, a neural network architecture
+that places learnable activation functions on edges instead of fixed ones on
+nodes. I focus on three questions:
 
-[**D. L. Gallegos Espinoza**, Y. I. Guel, M. N. Sojib, M. Ceberio]{.pub-authors}
+::: {.topics}
+::: {.topic}
+[01]{.num}
 
-[*Advances in Soft Computing (MICAI 2026)*, LNAI 17149, Springer]{.pub-venue}
-[[DOI](https://doi.org/10.1007/978-3-032-44176-8_14) [Code](https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks)]{.pub-links}
+**Training them well.** Adaptive optimizer sequencing (L-BFGS first), tested
+with ablations against baselines.
 :::
 
-::: {.pub data-tags="federated"}
-[2026]{.pub-year}
+::: {.topic}
+[02]{.num}
 
-[FedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning]{.pub-title}
-
-[M. N. Sojib, **D. L. Gallegos Espinoza**, M. Ceberio]{.pub-authors}
-
-[*Advances in Soft Computing (MICAI 2026)*, LNAI 17149, Springer]{.pub-venue}
-[[DOI](https://doi.org/10.1007/978-3-032-44176-8_16)]{.pub-links}
+**Reading them.** Turning trained KANs into mathematical formulas (Julia), so
+the model can be inspected.
 :::
 
-::: {.pub data-tags="uncertainty"}
-[2026]{.pub-year}
+::: {.topic}
+[03]{.num}
 
-[Why Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning]{.pub-title}
-
-[**D. L. Gallegos Espinoza**, O. Kosheleva, V. Kreinovich]{.pub-authors}
-
-[*Data Science in Finance and Accounting*, Studies in Big Data 181, Springer]{.pub-venue}
-[[DOI](https://doi.org/10.1007/978-3-032-06179-9_3)]{.pub-links}
+**Knowing when they're wrong.** Estimating confidence and expected error,
+including Hessian-based analysis.
+:::
+:::
 :::
 
-::: {.pub data-tags="water"}
-[2025]{.pub-year}
+::: {#publications .panel role="tabpanel" aria-labelledby="t-publications"}
+[Publications]{.panel-title}
 
-[Urban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning]{.pub-title}
-
-[**D. L. Gallegos Espinoza**, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez]{.pub-authors}
-
-[*Advances in Soft Computing (MICAI 2025)*, LNCS, Springer, pp. 86–99]{.pub-venue}
-[[DOI](https://doi.org/10.1007/978-3-032-09044-7_7)]{.pub-links}
+```{=html}
+<p class="hint">Click a paper to see authors and links.</p>
+<div class="pubs">
+  <details class="pub">
+    <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">Adaptive Optimizer Sequencing for Kolmogorov-Arnold Networks</span><span class="pub-venue">MICAI 2026 · Springer LNAI 17149</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong>, Y. I. Guel, M. N. Sojib, M. Ceberio</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a> <a class="btn-x sm" href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks"><i class="bi bi-github"></i> Code</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">FedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning</span><span class="pub-venue">MICAI 2026 · Springer LNAI 17149</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p>M. N. Sojib, <strong>D. L. Gallegos Espinoza</strong>, M. Ceberio</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_16">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">Why Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning</span><span class="pub-venue">Data Science in Finance and Accounting · Springer, Studies in Big Data 181</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong>, O. Kosheleva, V. Kreinovich</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-06179-9_3">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2025</span><span class="pub-main"><span class="pub-title">Urban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning</span><span class="pub-venue">MICAI 2025 · Springer LNCS, pp. 86–99</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong>, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-09044-7_7">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2025</span><span class="pub-main"><span class="pub-title">Towards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach</span><span class="pub-venue">MICAI 2024 · Springer LNCS 15246</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong> et al.</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-031-75540-8_1">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2023</span><span class="pub-main"><span class="pub-title">Anomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach</span><span class="pub-venue">Uncertainty, Constraints, and Decision Making · Springer, pp. 295–299</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p>A. De La Peña, <strong>D. L. Gallegos Espinoza</strong>, V. Kreinovich</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-031-36394-8_48">DOI</a></p>
+    </div>
+  </details>
+</div>
+```
 :::
 
-::: {.pub data-tags="water"}
-[2025]{.pub-year}
-
-[Towards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach]{.pub-title}
-
-[**D. L. Gallegos Espinoza** et al.]{.pub-authors}
-
-[*MICAI 2024*, LNCS 15246, Springer]{.pub-venue}
-[[DOI](https://doi.org/10.1007/978-3-031-75540-8_1)]{.pub-links}
-:::
-
-::: {.pub data-tags="uncertainty"}
-[2023]{.pub-year}
-
-[Anomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach]{.pub-title}
-
-[A. De La Peña, **D. L. Gallegos Espinoza**, V. Kreinovich]{.pub-authors}
-
-[*Uncertainty, Constraints, and Decision Making*, Studies in Systems, Decision and Control, Springer, pp. 295–299]{.pub-venue}
-[[DOI](https://doi.org/10.1007/978-3-031-36394-8_48)]{.pub-links}
-:::
-
-:::
-
-::: {.side}
-
-[Research]{.label}
-
-- Optimization for KANs: adaptive optimizer sequencing (L-BFGS first)
-- Turning trained KANs into readable formulas (Julia)
-- Confidence and error estimation, including Hessian-based analysis
-
-[Experience]{.label}
+::: {#experience .panel role="tabpanel" aria-labelledby="t-experience"}
+[Experience]{.panel-title}
 
 ::: {.rows}
-[Doctoral Researcher, UTEP]{.r} [2025–]{.d}
+[**Doctoral Researcher** · UTEP]{.r} [2025 – now]{.d}
 
-[Teaching Assistant, UTEP (Flutter, SQL, Java)]{.r} [2023–]{.d}
+[**Graduate Teaching Assistant** · UTEP: Cross-Platform Apps (Flutter), Databases (SQL), Data Structures (Java)]{.r} [2023 – now]{.d}
 
-[Data Science Intern, North American Development Bank]{.r} [2024]{.d}
+[**Data Science Intern** · North American Development Bank: risk-flagging system from climate, financial and geospatial data]{.r} [2024]{.d}
 
-[Graduate Research Assistant, UTEP]{.r} [2024]{.d}
+[**Graduate Research Assistant** · UTEP: deep learning for urban water-use prediction]{.r} [2024]{.d}
 
-[Test Engineer, Foxconn]{.r} [2021–22]{.d}
+[**Test Engineer** · Foxconn: automated server testing with Python and Bash]{.r} [2021 – 22]{.d}
+:::
 :::
 
-[Education]{.label}
+::: {#education .panel role="tabpanel" aria-labelledby="t-education"}
+[Education]{.panel-title}
 
 ::: {.rows}
-[Ph.D. Computer Science, UTEP]{.r} [2025–]{.d}
+[**Ph.D. Computer Science** · The University of Texas at El Paso · GPA 4.00]{.r} [2025 – now]{.d}
 
-[M.S. Data and Information Science, UTEP]{.r} [2024]{.d}
+[**M.S. Data and Information Science** · The University of Texas at El Paso · GPA 3.72]{.r} [2024]{.d}
 
-[B.S. Materials Engineering, UACJ]{.r} [2021]{.d}
+[**B.S. Materials Engineering** · Universidad Autónoma de Ciudad Juárez · GPA 3.88]{.r} [2021]{.d}
 :::
 
-[Tools]{.label}
+[Tools]{.panel-title .second}
 
-Python (PyTorch, TensorFlow, scikit-learn) · Julia · Java · SQL · Dart/Flutter · Git · LaTeX
-
-:::
-
+[Python]{.tag} [PyTorch]{.tag} [TensorFlow]{.tag} [scikit-learn]{.tag} [Julia]{.tag}
+[Java]{.tag} [SQL]{.tag} [Dart / Flutter]{.tag} [Git]{.tag} [LaTeX]{.tag}
 :::
 
 :::
