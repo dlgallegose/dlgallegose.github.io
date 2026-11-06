@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "index.html#research",
-    "href": "index.html#research",
-    "title": "Damian Gallegos",
-    "section": "Research",
-    "text": "Research\nMy research is in machine learning, with a primary focus on Kolmogorov-Arnold Networks, a neural network architecture that replaces fixed activation functions on nodes with learnable activation functions on edges.\n\n\n\n\nOptimization for KANs\nAdaptive optimizer sequencing (L-BFGS first), validated with ablations against baselines, with open-source code.\n\n\n\n\n\nInterpretability\nTurning trained KANs into readable mathematical formulas (Julia), so a model can be inspected rather than just trusted.\n\n\n\n\n\nConfidence & error estimation\nMethods to estimate how confident a model is and how wrong it is likely to be, including Hessian-based analysis."
-  },
-  {
     "objectID": "index.html#publications",
     "href": "index.html#publications",
     "title": "Damian Gallegos",
     "section": "Publications",
-    "text": "Publications\n\n  All\n  KANs\n  Uncertainty & theory\n  Federated learning\n  ML for water\n\n\n\n2026\nAdaptive Optimizer Sequencing for Kolmogorov-Arnold Networks\nD. L. Gallegos Espinoza, Y. I. Guel, M. N. Sojib, M. Ceberio\nAdvances in Soft Computing (MICAI 2026), LNAI vol. 17149, Springer, 2027\nDOI  Code \n\n\n2026\nFedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning\nM. N. Sojib, D. L. Gallegos Espinoza, M. Ceberio\nAdvances in Soft Computing (MICAI 2026), LNAI vol. 17149, Springer, 2027\nDOI \n\n\n2026\nWhy Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning\nD. L. Gallegos Espinoza, O. Kosheleva, V. Kreinovich\nData Science in Finance and Accounting, Studies in Big Data vol. 181, Springer, 2026\nDOI \n\n\n2025\nUrban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning\nD. L. Gallegos Espinoza, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez\nAdvances in Soft Computing (MICAI 2025), LNCS, Springer, 2025, pp. 86–99\nDOI \n\n\n2025\nTowards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach\nD. L. Gallegos Espinoza et al.\nMICAI 2024, LNCS vol. 15246, Springer, 2025\nDOI \n\n\n2023\nAnomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach\nA. De La Peña, D. L. Gallegos Espinoza, V. Kreinovich\nUncertainty, Constraints, and Decision Making, Studies in Systems, Decision and Control, Springer, 2023, pp. 295–299\nDOI"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Damian Gallegos",
-    "section": "Experience",
-    "text": "Experience\n\n\nJan 2025 – present\nDoctoral Researcher UTEP\nTrustworthy ML and Kolmogorov-Arnold Networks.\n\n\n2023 – present\nGraduate Teaching Assistant UTEP\nCross-Platform App Development (Dart, Flutter), Database Management (SQL), and Data Structures and Algorithms (Java).\n\n\nMay – Aug 2024\nData Science Intern North American Development Bank\nBuilt a Python system fusing climate, financial, and geospatial data to flag project risk early; automated project-status reporting with Power BI (80% less time).\n\n\nJan – Aug 2024\nGraduate Research Assistant UTEP\nDeep learning models for urban water-use prediction.\n\n\nDec 2021 – Aug 2022\nTest Engineer Foxconn\nAutomated server testing and failure analysis with Python and Bash."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Damian Gallegos",
-    "section": "Education",
-    "text": "Education\n\n\nPh.D. · 2025 – present\n\nComputer Science\nThe University of Texas at El Paso · GPA 4.00\n\n\n\nM.S. · 2024\n\nData and Information Science\nThe University of Texas at El Paso · GPA 3.72 Thesis: machine learning for water-use prediction\n\n\n\nB.S. · 2021\n\nMaterials Engineering\nUniversidad Autónoma de Ciudad Juárez · GPA 3.88"
-  },
-  {
-    "objectID": "index.html#skills",
-    "href": "index.html#skills",
-    "title": "Damian Gallegos",
-    "section": "Skills & Tools",
-    "text": "Skills & Tools\n\n\nMachine learning & statistics\nUncertainty quantification Probabilistic modeling Interpretable / symbolic ML Federated learning L-BFGS & second-order methods Hessian analysis Ablations & reproducible pipelines\n\n\nProgramming\nPython PyTorch TensorFlow scikit-learn NumPy Julia Java SQL Dart / Flutter\n\n\nTools\nGit / GitHub Linux LaTeX Quarto"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Damian Gallegos",
-    "section": "Contact",
-    "text": "Contact\n\nI’m always happy to talk about research and collaborations.\n\n  \n  dlgallegose@miners.utep.edu\n  Click to copy\n\n github.com/dlgallegose  ORCID 0009-0002-8351-9977"
+    "text": "Publications\n\n  All\n  KANs\n  Uncertainty\n  Federated learning\n  ML for water\n\n\n2026\nAdaptive Optimizer Sequencing for Kolmogorov-Arnold Networks\nD. L. Gallegos Espinoza, Y. I. Guel, M. N. Sojib, M. Ceberio\nAdvances in Soft Computing (MICAI 2026), LNAI 17149, Springer DOI Code\n\n\n2026\nFedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning\nM. N. Sojib, D. L. Gallegos Espinoza, M. Ceberio\nAdvances in Soft Computing (MICAI 2026), LNAI 17149, Springer DOI\n\n\n2026\nWhy Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning\nD. L. Gallegos Espinoza, O. Kosheleva, V. Kreinovich\nData Science in Finance and Accounting, Studies in Big Data 181, Springer DOI\n\n\n2025\nUrban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning\nD. L. Gallegos Espinoza, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez\nAdvances in Soft Computing (MICAI 2025), LNCS, Springer, pp. 86–99 DOI\n\n\n2025\nTowards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach\nD. L. Gallegos Espinoza et al.\nMICAI 2024, LNCS 15246, Springer DOI\n\n\n2023\nAnomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach\nA. De La Peña, D. L. Gallegos Espinoza, V. Kreinovich\nUncertainty, Constraints, and Decision Making, Studies in Systems, Decision and Control, Springer, pp. 295–299 DOI"
   },
   {
     "objectID": "dlgallegose.github.io/index.html#hi-im-damian-gallegos",

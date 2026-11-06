@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1a257240834d802cf5c395aaf22eb875.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ff86accc9acb9d7f4f0773f6b4763483.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-1a257240834d802cf5c395aaf22eb875.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c2f97788d0fcbf95b6d1ac768aec47d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-682176464abe799d630258928590df42.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-c2f97788d0fcbf95b6d1ac768aec47d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,16 +79,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<meta name="description" content="Damian L. Gallegos Espinoza: Ph.D. student in Computer Science at UTEP working on trustworthy machine learning and Kolmogorov-Arnold Networks.">
-<script>
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-    document.documentElement.classList.add('js-reveal');
-  }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<meta name="description" content="Damian L. Gallegos Espinoza: Ph.D. student in Computer Science at UTEP studying uncertainty and error estimation in neural networks, with a focus on Kolmogorov-Arnold Networks.">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -294,22 +288,6 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html#research"> 
-<span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html#publications"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html#experience"> 
-<span class="menu-text">Experience</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html#contact"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/dlgallegose"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -415,40 +393,16 @@ ul.task-list li input[type="checkbox"] {
 
 <script>
 (function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Rotating research topics in the hero
-  var rot = document.getElementById('rotator');
-  if (rot && !reduce) {
-    var words = ['uncertainty quantification', 'Kolmogorov-Arnold Networks', 'interpretable models', 'error estimation'];
-    var i = 0;
-    setInterval(function () {
-      rot.classList.add('out');
-      setTimeout(function () {
-        i = (i + 1) % words.length;
-        rot.textContent = words[i];
-        rot.classList.remove('out');
-      }, 350);
-    }, 2800);
-  }
-
-  // Scroll reveal
-  if (document.documentElement.classList.contains('js-reveal')) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-  }
-
   // Publication filters
   var chips = document.querySelectorAll('.chip');
   var pubs = document.querySelectorAll('.pub');
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       var f = chip.getAttribute('data-filter');
-      chips.forEach(function (c) { c.classList.toggle('active', c === chip); c.setAttribute('aria-pressed', c === chip); });
+      chips.forEach(function (c) {
+        c.classList.toggle('active', c === chip);
+        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+      });
       pubs.forEach(function (p) {
         var tags = (p.getAttribute('data-tags') || '').split(' ');
         p.classList.toggle('hidden', f !== 'all' && tags.indexOf(f) === -1);
@@ -464,8 +418,8 @@ ul.task-list li input[type="checkbox"] {
       var hint = btn.querySelector('.copy-hint');
       var done = function () {
         btn.classList.add('copied');
-        hint.textContent = 'Copied!';
-        setTimeout(function () { btn.classList.remove('copied'); hint.textContent = 'Click to copy'; }, 1800);
+        hint.textContent = 'copied';
+        setTimeout(function () { btn.classList.remove('copied'); hint.textContent = 'copy'; }, 1600);
       };
       if (navigator.clipboard) {
         navigator.clipboard.writeText(email).then(done, function () { window.location.href = 'mailto:' + email; });
@@ -1005,5 +959,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
