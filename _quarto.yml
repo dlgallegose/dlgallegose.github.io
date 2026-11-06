@@ -7,14 +7,6 @@ website:
   page-navigation: false
   navbar:
     right:
-      - text: Research
-        href: index.qmd#research
-      - text: Publications
-        href: index.qmd#publications
-      - text: Experience
-        href: index.qmd#experience
-      - text: Contact
-        href: index.qmd#contact
       - icon: github
         href: https://github.com/dlgallegose
         aria-label: GitHub
@@ -28,6 +20,5 @@ format:
     css: styles.css
     page-layout: custom
     toc: false
-    smooth-scroll: true
     include-in-header: _includes/head.html
     include-after-body: _includes/scripts.html

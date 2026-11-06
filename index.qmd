@@ -4,94 +4,41 @@ pagetitle: "Damian Gallegos"
 
 ::: {.site}
 
-::: {.hero}
-::: {.hero-text}
-[Ph.D. Student · Computer Science · UTEP]{.eyebrow}
+::: {.masthead}
+![](images/headshot.jpg){.portrait fig-alt="Headshot of Damian Gallegos"}
 
-[Damian L. Gallegos Espinoza]{.hero-name}
+::: {.who}
+[Damian L. Gallegos Espinoza]{.name}
 
-[I build machine learning you can trust, working on [uncertainty quantification]{#rotator}.]{.hero-lede}
+[Ph.D. Student in Computer Science · The University of Texas at El Paso]{.role}
 
-I study how confident a neural network is, and how wrong it is likely to be,
-with a focus on **Kolmogorov-Arnold Networks (KANs)**.
+I study uncertainty and error estimation in neural networks, with a focus on
+Kolmogorov-Arnold Networks (KANs).
 
-::: {.hero-actions}
-[Publications](#publications){.btn-pill .solid}
-[Download CV](files/cv.pdf){.btn-pill}
-[<i class="bi bi-envelope"></i>](mailto:dlgallegose@miners.utep.edu){.icon-link aria-label="Email"}
-[<i class="bi bi-github"></i>](https://github.com/dlgallegose){.icon-link aria-label="GitHub"}
-[<i class="bi bi-person-badge"></i>](https://orcid.org/0009-0002-8351-9977){.icon-link aria-label="ORCID"}
+::: {.links}
+`<button class="copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address">dlgallegose@miners.utep.edu <span class="copy-hint">copy</span></button>`{=html}
+[GitHub](https://github.com/dlgallegose)
+[ORCID](https://orcid.org/0009-0002-8351-9977)
+[CV (PDF)](files/cv.pdf)
 :::
-:::
-
-::: {.hero-photo}
-![](images/headshot.jpg){fig-alt="Headshot of Damian Gallegos"}
 :::
 :::
 
-::: {.stats .reveal}
-::: {.stat}
-[6]{.stat-num data-count="6"}
-[peer-reviewed publications]{.stat-label}
-:::
-::: {.stat}
-[4]{.stat-num data-count="4"}
-[papers at MICAI]{.stat-label}
-:::
-::: {.stat}
-[4.00]{.stat-num}
-[Ph.D. GPA]{.stat-label}
-:::
-:::
+::: {.body}
 
-## Research {#research .reveal}
+::: {.main}
 
-My research is in **machine learning**, with a primary focus on
-**Kolmogorov-Arnold Networks**, a neural network architecture that replaces
-fixed activation functions on nodes with learnable activation functions on edges.
-
-::: {.cards .reveal}
-::: {.card-x}
-[<i class="bi bi-speedometer2"></i>]{.card-icon}
-
-### Optimization for KANs
-
-Adaptive optimizer sequencing (L-BFGS first), validated with ablations
-against baselines, with open-source code.
-:::
-
-::: {.card-x}
-[<i class="bi bi-braces"></i>]{.card-icon}
-
-### Interpretability
-
-Turning trained KANs into readable mathematical formulas (Julia), so a model
-can be inspected rather than just trusted.
-:::
-
-::: {.card-x}
-[<i class="bi bi-bullseye"></i>]{.card-icon}
-
-### Confidence & error estimation
-
-Methods to estimate how confident a model is and how wrong it is likely to be,
-including Hessian-based analysis.
-:::
-:::
-
-## Publications {#publications .reveal}
+## Publications {#publications}
 
 ```{=html}
 <div class="filters" role="group" aria-label="Filter publications by topic">
-  <button class="chip active" data-filter="all">All</button>
-  <button class="chip" data-filter="kan">KANs</button>
-  <button class="chip" data-filter="uncertainty">Uncertainty &amp; theory</button>
-  <button class="chip" data-filter="federated">Federated learning</button>
-  <button class="chip" data-filter="water">ML for water</button>
+  <button class="chip active" data-filter="all" aria-pressed="true">All</button>
+  <button class="chip" data-filter="kan" aria-pressed="false">KANs</button>
+  <button class="chip" data-filter="uncertainty" aria-pressed="false">Uncertainty</button>
+  <button class="chip" data-filter="federated" aria-pressed="false">Federated learning</button>
+  <button class="chip" data-filter="water" aria-pressed="false">ML for water</button>
 </div>
 ```
-
-::: {.pubs}
 
 ::: {.pub data-tags="kan"}
 [2026]{.pub-year}
@@ -100,10 +47,8 @@ including Hessian-based analysis.
 
 [**D. L. Gallegos Espinoza**, Y. I. Guel, M. N. Sojib, M. Ceberio]{.pub-authors}
 
-[*Advances in Soft Computing (MICAI 2026)*, LNAI vol. 17149, Springer, 2027]{.pub-venue}
-
-[DOI <i class="bi bi-arrow-up-right"></i>](https://doi.org/10.1007/978-3-032-44176-8_14){.pub-link}
-[Code <i class="bi bi-github"></i>](https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks){.pub-link}
+[*Advances in Soft Computing (MICAI 2026)*, LNAI 17149, Springer]{.pub-venue}
+[[DOI](https://doi.org/10.1007/978-3-032-44176-8_14) [Code](https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks)]{.pub-links}
 :::
 
 ::: {.pub data-tags="federated"}
@@ -113,9 +58,8 @@ including Hessian-based analysis.
 
 [M. N. Sojib, **D. L. Gallegos Espinoza**, M. Ceberio]{.pub-authors}
 
-[*Advances in Soft Computing (MICAI 2026)*, LNAI vol. 17149, Springer, 2027]{.pub-venue}
-
-[DOI <i class="bi bi-arrow-up-right"></i>](https://doi.org/10.1007/978-3-032-44176-8_16){.pub-link}
+[*Advances in Soft Computing (MICAI 2026)*, LNAI 17149, Springer]{.pub-venue}
+[[DOI](https://doi.org/10.1007/978-3-032-44176-8_16)]{.pub-links}
 :::
 
 ::: {.pub data-tags="uncertainty"}
@@ -125,9 +69,8 @@ including Hessian-based analysis.
 
 [**D. L. Gallegos Espinoza**, O. Kosheleva, V. Kreinovich]{.pub-authors}
 
-[*Data Science in Finance and Accounting*, Studies in Big Data vol. 181, Springer, 2026]{.pub-venue}
-
-[DOI <i class="bi bi-arrow-up-right"></i>](https://doi.org/10.1007/978-3-032-06179-9_3){.pub-link}
+[*Data Science in Finance and Accounting*, Studies in Big Data 181, Springer]{.pub-venue}
+[[DOI](https://doi.org/10.1007/978-3-032-06179-9_3)]{.pub-links}
 :::
 
 ::: {.pub data-tags="water"}
@@ -137,9 +80,8 @@ including Hessian-based analysis.
 
 [**D. L. Gallegos Espinoza**, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez]{.pub-authors}
 
-[*Advances in Soft Computing (MICAI 2025)*, LNCS, Springer, 2025, pp. 86–99]{.pub-venue}
-
-[DOI <i class="bi bi-arrow-up-right"></i>](https://doi.org/10.1007/978-3-032-09044-7_7){.pub-link}
+[*Advances in Soft Computing (MICAI 2025)*, LNCS, Springer, pp. 86–99]{.pub-venue}
+[[DOI](https://doi.org/10.1007/978-3-032-09044-7_7)]{.pub-links}
 :::
 
 ::: {.pub data-tags="water"}
@@ -149,9 +91,8 @@ including Hessian-based analysis.
 
 [**D. L. Gallegos Espinoza** et al.]{.pub-authors}
 
-[*MICAI 2024*, LNCS vol. 15246, Springer, 2025]{.pub-venue}
-
-[DOI <i class="bi bi-arrow-up-right"></i>](https://doi.org/10.1007/978-3-031-75540-8_1){.pub-link}
+[*MICAI 2024*, LNCS 15246, Springer]{.pub-venue}
+[[DOI](https://doi.org/10.1007/978-3-031-75540-8_1)]{.pub-links}
 :::
 
 ::: {.pub data-tags="uncertainty"}
@@ -161,134 +102,50 @@ including Hessian-based analysis.
 
 [A. De La Peña, **D. L. Gallegos Espinoza**, V. Kreinovich]{.pub-authors}
 
-[*Uncertainty, Constraints, and Decision Making*, Studies in Systems, Decision and Control, Springer, 2023, pp. 295–299]{.pub-venue}
-
-[DOI <i class="bi bi-arrow-up-right"></i>](https://doi.org/10.1007/978-3-031-36394-8_48){.pub-link}
+[*Uncertainty, Constraints, and Decision Making*, Studies in Systems, Decision and Control, Springer, pp. 295–299]{.pub-venue}
+[[DOI](https://doi.org/10.1007/978-3-031-36394-8_48)]{.pub-links}
 :::
 
 :::
 
-## Experience {#experience .reveal}
+::: {.side}
 
-::: {.timeline .reveal}
+[Research]{.label}
 
-::: {.tl-item}
-[Jan 2025 – present]{.tl-date}
+- Optimization for KANs: adaptive optimizer sequencing (L-BFGS first)
+- Turning trained KANs into readable formulas (Julia)
+- Confidence and error estimation, including Hessian-based analysis
 
-[Doctoral Researcher]{.tl-role} [UTEP]{.tl-org}
+[Experience]{.label}
 
-Trustworthy ML and Kolmogorov-Arnold Networks.
+::: {.rows}
+[Doctoral Researcher, UTEP]{.r} [2025–]{.d}
+
+[Teaching Assistant, UTEP (Flutter, SQL, Java)]{.r} [2023–]{.d}
+
+[Data Science Intern, North American Development Bank]{.r} [2024]{.d}
+
+[Graduate Research Assistant, UTEP]{.r} [2024]{.d}
+
+[Test Engineer, Foxconn]{.r} [2021–22]{.d}
 :::
 
-::: {.tl-item}
-[2023 – present]{.tl-date}
+[Education]{.label}
 
-[Graduate Teaching Assistant]{.tl-role} [UTEP]{.tl-org}
+::: {.rows}
+[Ph.D. Computer Science, UTEP]{.r} [2025–]{.d}
 
-Cross-Platform App Development (Dart, Flutter), Database Management (SQL),
-and Data Structures and Algorithms (Java).
+[M.S. Data and Information Science, UTEP]{.r} [2024]{.d}
+
+[B.S. Materials Engineering, UACJ]{.r} [2021]{.d}
 :::
 
-::: {.tl-item}
-[May – Aug 2024]{.tl-date}
+[Tools]{.label}
 
-[Data Science Intern]{.tl-role} [North American Development Bank]{.tl-org}
+Python (PyTorch, TensorFlow, scikit-learn) · Julia · Java · SQL · Dart/Flutter · Git · LaTeX
 
-Built a Python system fusing climate, financial, and geospatial data to flag
-project risk early; automated project-status reporting with Power BI (80% less time).
-:::
-
-::: {.tl-item}
-[Jan – Aug 2024]{.tl-date}
-
-[Graduate Research Assistant]{.tl-role} [UTEP]{.tl-org}
-
-Deep learning models for urban water-use prediction.
-:::
-
-::: {.tl-item}
-[Dec 2021 – Aug 2022]{.tl-date}
-
-[Test Engineer]{.tl-role} [Foxconn]{.tl-org}
-
-Automated server testing and failure analysis with Python and Bash.
 :::
 
 :::
-
-## Education {#education .reveal}
-
-::: {.cards .edu .reveal}
-::: {.card-x}
-[Ph.D. · 2025 – present]{.edu-tag}
-
-### Computer Science
-
-The University of Texas at El Paso · GPA 4.00
-:::
-
-::: {.card-x}
-[M.S. · 2024]{.edu-tag}
-
-### Data and Information Science
-
-The University of Texas at El Paso · GPA 3.72<br>
-Thesis: machine learning for water-use prediction
-:::
-
-::: {.card-x}
-[B.S. · 2021]{.edu-tag}
-
-### Materials Engineering
-
-Universidad Autónoma de Ciudad Juárez · GPA 3.88
-:::
-:::
-
-## Skills & Tools {#skills .reveal}
-
-::: {.skill-groups .reveal}
-::: {.skill-group}
-[Machine learning & statistics]{.skill-head}
-
-[Uncertainty quantification]{.tag} [Probabilistic modeling]{.tag}
-[Interpretable / symbolic ML]{.tag} [Federated learning]{.tag}
-[L-BFGS & second-order methods]{.tag} [Hessian analysis]{.tag}
-[Ablations & reproducible pipelines]{.tag}
-:::
-
-::: {.skill-group}
-[Programming]{.skill-head}
-
-[Python]{.tag} [PyTorch]{.tag} [TensorFlow]{.tag} [scikit-learn]{.tag}
-[NumPy]{.tag} [Julia]{.tag} [Java]{.tag} [SQL]{.tag} [Dart / Flutter]{.tag}
-:::
-
-::: {.skill-group}
-[Tools]{.skill-head}
-
-[Git / GitHub]{.tag} [Linux]{.tag} [LaTeX]{.tag} [Quarto]{.tag}
-:::
-:::
-
-## Contact {#contact .reveal}
-
-::: {.contact .reveal}
-I'm always happy to talk about research and collaborations.
-
-```{=html}
-<button class="copy-email" data-email="dlgallegose@miners.utep.edu">
-  <i class="bi bi-envelope"></i>
-  <span class="copy-text">dlgallegose@miners.utep.edu</span>
-  <span class="copy-hint">Click to copy</span>
-</button>
-```
-
-[<i class="bi bi-github"></i> github.com/dlgallegose](https://github.com/dlgallegose){.contact-link}
-[<i class="bi bi-person-badge"></i> ORCID 0009-0002-8351-9977](https://orcid.org/0009-0002-8351-9977){.contact-link}
-:::
-
-<!-- Add your LinkedIn once your profile URL is set: -->
-<!-- [<i class="bi bi-linkedin"></i> LinkedIn](https://linkedin.com/in/yourname){.contact-link} -->
 
 :::

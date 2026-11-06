@@ -1,39 +1,15 @@
 <script>
 (function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Rotating research topics in the hero
-  var rot = document.getElementById('rotator');
-  if (rot && !reduce) {
-    var words = ['uncertainty quantification', 'Kolmogorov-Arnold Networks', 'interpretable models', 'error estimation'];
-    var i = 0;
-    setInterval(function () {
-      rot.classList.add('out');
-      setTimeout(function () {
-        i = (i + 1) % words.length;
-        rot.textContent = words[i];
-        rot.classList.remove('out');
-      }, 350);
-    }, 2800);
-  }
-
-  // Scroll reveal
-  if (document.documentElement.classList.contains('js-reveal')) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-  }
-
   // Publication filters
   var chips = document.querySelectorAll('.chip');
   var pubs = document.querySelectorAll('.pub');
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       var f = chip.getAttribute('data-filter');
-      chips.forEach(function (c) { c.classList.toggle('active', c === chip); c.setAttribute('aria-pressed', c === chip); });
+      chips.forEach(function (c) {
+        c.classList.toggle('active', c === chip);
+        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+      });
       pubs.forEach(function (p) {
         var tags = (p.getAttribute('data-tags') || '').split(' ');
         p.classList.toggle('hidden', f !== 'all' && tags.indexOf(f) === -1);
@@ -49,8 +25,8 @@
       var hint = btn.querySelector('.copy-hint');
       var done = function () {
         btn.classList.add('copied');
-        hint.textContent = 'Copied!';
-        setTimeout(function () { btn.classList.remove('copied'); hint.textContent = 'Click to copy'; }, 1800);
+        hint.textContent = 'copied';
+        setTimeout(function () { btn.classList.remove('copied'); hint.textContent = 'copy'; }, 1600);
       };
       if (navigator.clipboard) {
         navigator.clipboard.writeText(email).then(done, function () { window.location.href = 'mailto:' + email; });
