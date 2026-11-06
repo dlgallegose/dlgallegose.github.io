@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c2f97788d0fcbf95b6d1ac768aec47d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-682176464abe799d630258928590df42.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-c2f97788d0fcbf95b6d1ac768aec47d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-67070a49b00229ee946c07a6e7879891.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-67070a49b00229ee946c07a6e7879891.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-67070a49b00229ee946c07a6e7879891.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,187 +88,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455).
-    // Not run on load: stylesheets are set before first paint there, and
-    // scrolling would undo the scroll to a URL fragment (#14973).
-    // The one pixel nudge keeps the reader where they were.
-    const refreshSafariScrollbar = () => {
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        const scrollY = window.scrollY;
-        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
-        setTimeout(() => {
-          window.scrollTo(0, scrollY);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    const darkModeDefault = queryPrefersDark.matches;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      refreshSafariScrollbar();
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    queryPrefersDark.addEventListener("change", e => {
-      if(window.localStorage.getItem("quarto-color-scheme") !== null)
-        return;
-      const alternate = e.matches
-      toggleColorMode(alternate);
-      refreshSafariScrollbar();
-      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
-      toggleGiscusIfUsed(alternate, darkModeDefault);
-    });
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -296,7 +116,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
 </div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
@@ -311,7 +130,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
 <div class="site">
 <div class="masthead">
 <p><img src="images/headshot.jpg" class="portrait img-fluid" alt="Headshot of Damian Gallegos"></p>
@@ -319,82 +137,105 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="name">Damian L. Gallegos Espinoza</span></p>
 <p><span class="role">Ph.D.&nbsp;Student in Computer Science · The University of Texas at El Paso</span></p>
 <p>I study uncertainty and error estimation in neural networks, with a focus on Kolmogorov-Arnold Networks (KANs).</p>
-<div class="links">
-<p><button class="copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address">dlgallegose@miners.utep.edu <span class="copy-hint">copy</span></button> <a href="https://github.com/dlgallegose">GitHub</a> <a href="https://orcid.org/0009-0002-8351-9977">ORCID</a> <a href="files/cv.pdf">CV (PDF)</a></p>
+<div class="actions">
+  <a class="btn-x primary" href="files/cv.pdf"><i class="bi bi-file-earmark-text"></i> CV</a>
+  <button class="btn-x copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address"><i class="bi bi-envelope"></i> <span class="copy-label">Email</span></button>
+  <a class="btn-x" href="https://github.com/dlgallegose"><i class="bi bi-github"></i> GitHub</a>
+  <a class="btn-x" href="https://orcid.org/0009-0002-8351-9977"><i class="bi bi-person-vcard"></i> ORCID</a>
 </div>
 </div>
 </div>
-<div class="body">
-<section id="publications" class="level2 main">
-<h2 data-anchor-id="publications">Publications</h2>
-<div class="filters" role="group" aria-label="Filter publications by topic">
-  <button class="chip active" data-filter="all" aria-pressed="true">All</button>
-  <button class="chip" data-filter="kan" aria-pressed="false">KANs</button>
-  <button class="chip" data-filter="uncertainty" aria-pressed="false">Uncertainty</button>
-  <button class="chip" data-filter="federated" aria-pressed="false">Federated learning</button>
-  <button class="chip" data-filter="water" aria-pressed="false">ML for water</button>
+<div class="tabs-x" role="tablist" aria-label="Sections">
+  <button role="tab" class="tab-x" id="t-research" aria-controls="research" aria-selected="true">Research</button>
+  <button role="tab" class="tab-x" id="t-publications" aria-controls="publications" aria-selected="false">Publications <span class="count">6</span></button>
+  <button role="tab" class="tab-x" id="t-experience" aria-controls="experience" aria-selected="false">Experience</button>
+  <button role="tab" class="tab-x" id="t-education" aria-controls="education" aria-selected="false">Education &amp; Tools</button>
 </div>
-<div class="pub" data-tags="kan">
-<p><span class="pub-year">2026</span></p>
-<p><span class="pub-title">Adaptive Optimizer Sequencing for Kolmogorov-Arnold Networks</span></p>
-<p><span class="pub-authors"><strong>D. L. Gallegos Espinoza</strong>, Y. I. Guel, M. N. Sojib, M. Ceberio</span></p>
-<p><span class="pub-venue"><em>Advances in Soft Computing (MICAI 2026)</em>, LNAI 17149, Springer</span> <span class="pub-links"><a href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a> <a href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks">Code</a></span></p>
+<div id="research" class="panel" role="tabpanel" aria-labelledby="t-research">
+<p><span class="panel-title">Research</span></p>
+<p>My work is on <strong>Kolmogorov-Arnold Networks</strong>, a neural network architecture that places learnable activation functions on edges instead of fixed ones on nodes. I focus on three questions:</p>
+<div class="topics">
+<div class="topic">
+<p><span class="num">01</span></p>
+<p><strong>Training them well.</strong> Adaptive optimizer sequencing (L-BFGS first), tested with ablations against baselines.</p>
 </div>
-<div class="pub" data-tags="federated">
-<p><span class="pub-year">2026</span></p>
-<p><span class="pub-title">FedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning</span></p>
-<p><span class="pub-authors">M. N. Sojib, <strong>D. L. Gallegos Espinoza</strong>, M. Ceberio</span></p>
-<p><span class="pub-venue"><em>Advances in Soft Computing (MICAI 2026)</em>, LNAI 17149, Springer</span> <span class="pub-links"><a href="https://doi.org/10.1007/978-3-032-44176-8_16">DOI</a></span></p>
+<div class="topic">
+<p><span class="num">02</span></p>
+<p><strong>Reading them.</strong> Turning trained KANs into mathematical formulas (Julia), so the model can be inspected.</p>
 </div>
-<div class="pub" data-tags="uncertainty">
-<p><span class="pub-year">2026</span></p>
-<p><span class="pub-title">Why Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning</span></p>
-<p><span class="pub-authors"><strong>D. L. Gallegos Espinoza</strong>, O. Kosheleva, V. Kreinovich</span></p>
-<p><span class="pub-venue"><em>Data Science in Finance and Accounting</em>, Studies in Big Data 181, Springer</span> <span class="pub-links"><a href="https://doi.org/10.1007/978-3-032-06179-9_3">DOI</a></span></p>
+<div class="topic">
+<p><span class="num">03</span></p>
+<p><strong>Knowing when they’re wrong.</strong> Estimating confidence and expected error, including Hessian-based analysis.</p>
 </div>
-<div class="pub" data-tags="water">
-<p><span class="pub-year">2025</span></p>
-<p><span class="pub-title">Urban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning</span></p>
-<p><span class="pub-authors"><strong>D. L. Gallegos Espinoza</strong>, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez</span></p>
-<p><span class="pub-venue"><em>Advances in Soft Computing (MICAI 2025)</em>, LNCS, Springer, pp.&nbsp;86–99</span> <span class="pub-links"><a href="https://doi.org/10.1007/978-3-032-09044-7_7">DOI</a></span></p>
 </div>
-<div class="pub" data-tags="water">
-<p><span class="pub-year">2025</span></p>
-<p><span class="pub-title">Towards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach</span></p>
-<p><span class="pub-authors"><strong>D. L. Gallegos Espinoza</strong> et al.</span></p>
-<p><span class="pub-venue"><em>MICAI 2024</em>, LNCS 15246, Springer</span> <span class="pub-links"><a href="https://doi.org/10.1007/978-3-031-75540-8_1">DOI</a></span></p>
 </div>
-<div class="pub" data-tags="uncertainty">
-<p><span class="pub-year">2023</span></p>
-<p><span class="pub-title">Anomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach</span></p>
-<p><span class="pub-authors">A. De La Peña, <strong>D. L. Gallegos Espinoza</strong>, V. Kreinovich</span></p>
-<p><span class="pub-venue"><em>Uncertainty, Constraints, and Decision Making</em>, Studies in Systems, Decision and Control, Springer, pp.&nbsp;295–299</span> <span class="pub-links"><a href="https://doi.org/10.1007/978-3-031-36394-8_48">DOI</a></span></p>
+<div id="publications" class="panel" role="tabpanel" aria-labelledby="t-publications">
+<p><span class="panel-title">Publications</span></p>
+<p class="hint">Click a paper to see authors and links.</p>
+<div class="pubs">
+  <details class="pub">
+    <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">Adaptive Optimizer Sequencing for Kolmogorov-Arnold Networks</span><span class="pub-venue">MICAI 2026 · Springer LNAI 17149</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong>, Y. I. Guel, M. N. Sojib, M. Ceberio</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a> <a class="btn-x sm" href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks"><i class="bi bi-github"></i> Code</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">FedAWL: Client Selection via Age-Weighted Loss for Non-IID Federated Learning</span><span class="pub-venue">MICAI 2026 · Springer LNAI 17149</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p>M. N. Sojib, <strong>D. L. Gallegos Espinoza</strong>, M. Ceberio</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_16">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">Why Skew-Normal Distributions and How They Are Related to ReLU Activation Function in Deep Learning</span><span class="pub-venue">Data Science in Finance and Accounting · Springer, Studies in Big Data 181</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong>, O. Kosheleva, V. Kreinovich</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-06179-9_3">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2025</span><span class="pub-main"><span class="pub-title">Urban Crop Coefficient Estimation for Outdoor Water Management Using Machine Learning</span><span class="pub-venue">MICAI 2025 · Springer LNCS, pp. 86–99</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong>, N. Villanueva-Rosales, L. A. Garnica Chavira, H. A. Gutierrez</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-09044-7_7">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2025</span><span class="pub-main"><span class="pub-title">Towards Estimating Water Consumption in Semi-arid Urban Landscaping: A Machine Learning Approach</span><span class="pub-venue">MICAI 2024 · Springer LNCS 15246</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p><strong>D. L. Gallegos Espinoza</strong> et al.</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-031-75540-8_1">DOI</a></p>
+    </div>
+  </details>
+  <details class="pub">
+    <summary><span class="pub-year">2023</span><span class="pub-main"><span class="pub-title">Anomaly Detection in Crowdsourcing: Why Midpoints in Interval-Valued Approach</span><span class="pub-venue">Uncertainty, Constraints, and Decision Making · Springer, pp. 295–299</span></span><i class="bi bi-chevron-down chev"></i></summary>
+    <div class="pub-more">
+      <p>A. De La Peña, <strong>D. L. Gallegos Espinoza</strong>, V. Kreinovich</p>
+      <p><a class="btn-x sm" href="https://doi.org/10.1007/978-3-031-36394-8_48">DOI</a></p>
+    </div>
+  </details>
 </div>
-</section>
-<div class="side">
-<p><span class="label">Research</span></p>
-<ul>
-<li>Optimization for KANs: adaptive optimizer sequencing (L-BFGS first)</li>
-<li>Turning trained KANs into readable formulas (Julia)</li>
-<li>Confidence and error estimation, including Hessian-based analysis</li>
-</ul>
-<p><span class="label">Experience</span></p>
+</div>
+<div id="experience" class="panel" role="tabpanel" aria-labelledby="t-experience">
+<p><span class="panel-title">Experience</span></p>
 <div class="rows">
-<p><span class="r">Doctoral Researcher, UTEP</span> <span class="d">2025–</span></p>
-<p><span class="r">Teaching Assistant, UTEP (Flutter, SQL, Java)</span> <span class="d">2023–</span></p>
-<p><span class="r">Data Science Intern, North American Development Bank</span> <span class="d">2024</span></p>
-<p><span class="r">Graduate Research Assistant, UTEP</span> <span class="d">2024</span></p>
-<p><span class="r">Test Engineer, Foxconn</span> <span class="d">2021–22</span></p>
+<p><span class="r"><strong>Doctoral Researcher</strong> · UTEP</span> <span class="d">2025 – now</span></p>
+<p><span class="r"><strong>Graduate Teaching Assistant</strong> · UTEP: Cross-Platform Apps (Flutter), Databases (SQL), Data Structures (Java)</span> <span class="d">2023 – now</span></p>
+<p><span class="r"><strong>Data Science Intern</strong> · North American Development Bank: risk-flagging system from climate, financial and geospatial data</span> <span class="d">2024</span></p>
+<p><span class="r"><strong>Graduate Research Assistant</strong> · UTEP: deep learning for urban water-use prediction</span> <span class="d">2024</span></p>
+<p><span class="r"><strong>Test Engineer</strong> · Foxconn: automated server testing with Python and Bash</span> <span class="d">2021 – 22</span></p>
 </div>
-<p><span class="label">Education</span></p>
+</div>
+<div id="education" class="panel" role="tabpanel" aria-labelledby="t-education">
+<p><span class="panel-title">Education</span></p>
 <div class="rows">
-<p><span class="r">Ph.D.&nbsp;Computer Science, UTEP</span> <span class="d">2025–</span></p>
-<p><span class="r">M.S. Data and Information Science, UTEP</span> <span class="d">2024</span></p>
-<p><span class="r">B.S. Materials Engineering, UACJ</span> <span class="d">2021</span></p>
+<p><span class="r"><strong>Ph.D.&nbsp;Computer Science</strong> · The University of Texas at El Paso · GPA 4.00</span> <span class="d">2025 – now</span></p>
+<p><span class="r"><strong>M.S. Data and Information Science</strong> · The University of Texas at El Paso · GPA 3.72</span> <span class="d">2024</span></p>
+<p><span class="r"><strong>B.S. Materials Engineering</strong> · Universidad Autónoma de Ciudad Juárez · GPA 3.88</span> <span class="d">2021</span></p>
 </div>
-<p><span class="label">Tools</span></p>
-<p>Python (PyTorch, TensorFlow, scikit-learn) · Julia · Java · SQL · Dart/Flutter · Git · LaTeX</p>
-</div>
+<p><span class="panel-title second">Tools</span></p>
+<p><span class="tag">Python</span> <span class="tag">PyTorch</span> <span class="tag">TensorFlow</span> <span class="tag">scikit-learn</span> <span class="tag">Julia</span> <span class="tag">Java</span> <span class="tag">SQL</span> <span class="tag">Dart / Flutter</span> <span class="tag">Git</span> <span class="tag">LaTeX</span></p>
 </div>
 </div>
 
@@ -403,33 +244,46 @@ ul.task-list li input[type="checkbox"] {
 
 <script>
 (function () {
-  // Publication filters
-  var chips = document.querySelectorAll('.chip');
-  var pubs = document.querySelectorAll('.pub');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var f = chip.getAttribute('data-filter');
-      chips.forEach(function (c) {
-        c.classList.toggle('active', c === chip);
-        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+  // Tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-x'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+  function show(i, focus) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (panels[j]) panels[j].hidden = !on;
+    });
+    if (focus) tabs[i].focus();
+  }
+  if (tabs.length && panels.every(Boolean)) {
+    document.documentElement.classList.add('tabs-on');
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () {
+        show(i);
+        history.replaceState(null, '', '#' + t.getAttribute('aria-controls'));
       });
-      pubs.forEach(function (p) {
-        var tags = (p.getAttribute('data-tags') || '').split(' ');
-        p.classList.toggle('hidden', f !== 'all' && tags.indexOf(f) === -1);
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') show((i + 1) % tabs.length, true);
+        if (e.key === 'ArrowLeft') show((i - 1 + tabs.length) % tabs.length, true);
       });
     });
-  });
+    var start = 0;
+    var h = location.hash.slice(1);
+    tabs.forEach(function (t, i) { if (t.getAttribute('aria-controls') === h) start = i; });
+    show(start);
+  }
 
   // Copy email
   var btn = document.querySelector('.copy-email');
   if (btn) {
     btn.addEventListener('click', function () {
       var email = btn.getAttribute('data-email');
-      var hint = btn.querySelector('.copy-hint');
+      var label = btn.querySelector('.copy-label');
       var done = function () {
         btn.classList.add('copied');
-        hint.textContent = 'copied';
-        setTimeout(function () { btn.classList.remove('copied'); hint.textContent = 'copy'; }, 1600);
+        label.textContent = 'Email copied';
+        setTimeout(function () { btn.classList.remove('copied'); label.textContent = 'Email'; }, 1800);
       };
       if (navigator.clipboard) {
         navigator.clipboard.writeText(email).then(done, function () { window.location.href = 'mailto:' + email; });
@@ -442,54 +296,6 @@ ul.task-list li input[type="checkbox"] {
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const toggle = window.document.createElement('button');
-      toggle.type = "button";
-      toggle.setAttribute("role", "switch");
-      toggle.setAttribute("aria-checked", "false");
-      toggle.classList.add('top-right');
-      toggle.classList.add('quarto-color-scheme-toggle');
-      toggle.setAttribute("aria-label", "Toggle dark mode");
-      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      toggle.appendChild(i);
-      // Put the toggle in a landmark of its own, so that landmark navigation
-      // can reach it.
-      //
-      // The container is always a fresh direct child of body, and the toggle is
-      // never moved into page furniture that the theme or the author controls.
-      // The toggle is positioned against the page, so any ancestor that
-      // establishes a containing block captures it: a positioned element or a
-      // grid for position: absolute, and transform, filter, will-change or
-      // contain for position: fixed. A direct child of body has none of these
-      // to inherit, and the shift when one appears is silent and visual.
-      //
-      // ARIA says a document should have at most one banner, and axe reports a
-      // duplicate whether or not the banners carry distinct labels. So use a
-      // header when the page has no banner yet, and a named region otherwise.
-      //
-      // A header is a banner wherever it sits, unless it is inside sectioning
-      // content, so this cannot just look at the children of body: a custom
-      // page layout wraps the title block header in a plain div. An explicit
-      // role="banner" always counts.
-      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
-      const hasBanner = Array.from(
-        window.document.querySelectorAll('header:not([role]), [role="banner"]')
-      ).some(function(el) {
-        return el.hasAttribute("role") || el.closest(sectioning) === null;
-      });
-      const container = window.document.createElement(hasBanner ? "div" : "header");
-      if (hasBanner) {
-        container.setAttribute("role", "region");
-        container.setAttribute("aria-label", "Toggle dark mode");
-      }
-      container.classList.add('quarto-color-scheme-toggle-container');
-      container.appendChild(toggle);
-      window.document.body.appendChild(container);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
