@@ -12,9 +12,6 @@ working on **trustworthy machine learning**: quantifying uncertainty and
 estimating error in neural networks, with a focus on
 **Kolmogorov-Arnold Networks (KANs)**.
 
-I'm looking for **ML research internships** in uncertainty quantification,
-optimization, interpretable ML, or scientific machine learning.
-
 [Email](mailto:dlgallegose@miners.utep.edu) ·
 [GitHub](https://github.com/dlgallegose) ·
 [ORCID](https://orcid.org/0009-0002-8351-9977) ·
