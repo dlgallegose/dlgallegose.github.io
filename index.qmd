@@ -12,8 +12,8 @@ pagetitle: "Damian Gallegos"
 
 [Ph.D. Student in Computer Science · The University of Texas at El Paso]{.role}
 
-I study uncertainty and error estimation in neural networks, with a focus on
-Kolmogorov-Arnold Networks (KANs).
+I study how neural networks handle uncertainty: how confident they are, and how
+wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KANs).
 
 ```{=html}
 <div class="actions">
@@ -22,8 +22,28 @@ Kolmogorov-Arnold Networks (KANs).
   <a class="btn-x" href="https://github.com/dlgallegose"><i class="bi bi-github"></i> GitHub</a>
   <a class="btn-x" href="https://orcid.org/0009-0002-8351-9977"><i class="bi bi-person-vcard"></i> ORCID</a>
 </div>
+<div class="skills" aria-label="Skills">
+  <span class="tag">PyTorch</span><span class="tag">Julia</span><span class="tag">Python</span><span class="tag">Uncertainty quantification</span><span class="tag">L-BFGS / second-order optimization</span><span class="tag">Hessian analysis</span><span class="tag">Federated learning</span><span class="tag">SQL</span><span class="tag">Dart / Flutter</span>
+</div>
 ```
 :::
+
+```{=html}
+<figure class="kan" aria-label="Interactive demo: a learnable KAN edge function">
+  <div class="kan-head">
+    <span class="kan-title">A KAN edge learns a curve</span>
+    <span class="kan-stats" aria-live="polite">step <b id="kan-step">0</b> · MSE <b id="kan-mse">–</b></span>
+  </div>
+  <svg id="kan-svg" viewBox="0 0 320 190" role="img" aria-label="Spline curve phi of x with draggable control points"></svg>
+  <div class="kan-btns">
+    <button class="btn-x sm" data-target="sin">Fit sin(πx)</button>
+    <button class="btn-x sm" data-target="abs">Fit |x|</button>
+    <button class="btn-x sm" data-target="sq">Fit x²</button>
+    <button class="btn-x sm ghost" data-target="reset">Reset</button>
+  </div>
+  <figcaption>Each edge in a Kolmogorov-Arnold Network learns a 1-D function like this one. Drag the points or press Fit.</figcaption>
+</figure>
+```
 :::
 
 ```{=html}
@@ -31,37 +51,39 @@ Kolmogorov-Arnold Networks (KANs).
   <button role="tab" class="tab-x" id="t-research" aria-controls="research" aria-selected="true">Research</button>
   <button role="tab" class="tab-x" id="t-publications" aria-controls="publications" aria-selected="false">Publications <span class="count">6</span></button>
   <button role="tab" class="tab-x" id="t-experience" aria-controls="experience" aria-selected="false">Experience</button>
-  <button role="tab" class="tab-x" id="t-education" aria-controls="education" aria-selected="false">Education &amp; Tools</button>
+  <button role="tab" class="tab-x" id="t-education" aria-controls="education" aria-selected="false">Education</button>
 </div>
 ```
 
 ::: {#research .panel role="tabpanel" aria-labelledby="t-research"}
 [Research]{.panel-title}
 
-My work is on **Kolmogorov-Arnold Networks**, a neural network architecture
-that places learnable activation functions on edges instead of fixed ones on
-nodes. I focus on three questions:
+I'm a Ph.D. student in Computer Science at UTEP. I started out in Materials
+Engineering at UACJ, moved into data science for my M.S., and now work on the
+part of machine learning I find most interesting: knowing what a model doesn't know.
+I focus on three questions about KANs:
 
 ::: {.topics}
 ::: {.topic}
 [01]{.num}
 
-**Training them well.** Adaptive optimizer sequencing (L-BFGS first), tested
-with ablations against baselines.
+**How do we train them well?** Adaptive optimizer sequencing that runs L-BFGS
+first, tested with ablations against baselines
+([MICAI 2026, code on GitHub](https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks)).
 :::
 
 ::: {.topic}
 [02]{.num}
 
-**Reading them.** Turning trained KANs into mathematical formulas (Julia), so
-the model can be inspected.
+**Can we read them?** Extracting symbolic formulas from trained KANs in Julia,
+so a model can be read as an equation.
 :::
 
 ::: {.topic}
 [03]{.num}
 
-**Knowing when they're wrong.** Estimating confidence and expected error,
-including Hessian-based analysis.
+**When are they wrong?** Hessian-based estimates of a model's confidence and
+expected error.
 :::
 :::
 :::
@@ -144,11 +166,6 @@ including Hessian-based analysis.
 
 [**B.S. Materials Engineering** · Universidad Autónoma de Ciudad Juárez · GPA 3.88]{.r} [2021]{.d}
 :::
-
-[Tools]{.panel-title .second}
-
-[Python]{.tag} [PyTorch]{.tag} [TensorFlow]{.tag} [scikit-learn]{.tag} [Julia]{.tag}
-[Java]{.tag} [SQL]{.tag} [Dart / Flutter]{.tag} [Git]{.tag} [LaTeX]{.tag}
 :::
 
 :::
