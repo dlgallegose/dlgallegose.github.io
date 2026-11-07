@@ -17,7 +17,7 @@ A single-page site covering:
 ## Built with
 
 - [Quarto](https://quarto.org) — static site generator
-- Custom theme (`theme-light.scss`, `styles.css`); tabs and copy-email in `_includes/scripts.html`; a small KAN trained in the browser in `_includes/kan.html`
+- Custom theme (`theme-light.scss`: Bootstrap variables plus all custom rules, bundled with a hashed filename so browsers always get the latest styles); tabs and copy-email in `_includes/scripts.html`; a small KAN trained in the browser in `_includes/kan.html`
 - Hosted on GitHub Pages (`gh-pages` branch)
 
 *(For my actual skills/tech stack — ML frameworks, SQL, Flutter/Dart, etc. — see the [Skills & Tools](https://dlgallegose.github.io/#skills-tools) section on the site.)*
@@ -29,7 +29,7 @@ A single-page site covering:
 ├── _quarto.yml       # Site/project configuration
 ├── _brand.yml        # Color palette, typography, favicon
 ├── index.qmd         # All page content
-├── styles.css         # Custom CSS
+├── theme-light.scss   # Theme variables + custom CSS rules
 ├── images/            # Headshot, favicon
 └── files/              # Downloadable CV (PDF)
 ```

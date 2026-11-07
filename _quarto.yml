@@ -14,7 +14,6 @@ website:
 format:
   html:
     theme: [cosmo, theme-light.scss]
-    css: styles.css
     page-layout: custom
     toc: false
     include-in-header: _includes/head.html

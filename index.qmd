@@ -31,7 +31,7 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
   <span class="now-lbl">Now</span>
   <div class="now-item">
     <span class="now-key">Latest paper</span>
-    <span class="now-val"><a href="#publications" class="jump" data-open="pub-aos">Adaptive Optimizer Sequencing for KANs</a>, MICAI 2026
+    <span class="now-val"><a href="#publications" class="jump" data-open="pub-aos">Adaptive Optimizer Sequencing for KANs</a>, <span class="venue">MICAI 2026</span>
       <a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a> <a class="btn-x sm" href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks"><i class="bi bi-github"></i> Code</a></span>
   </div>
   <div class="now-item">
