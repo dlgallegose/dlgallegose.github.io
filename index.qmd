@@ -256,32 +256,35 @@ expected error.
       <div class="logo">UACJ</div>
       <div class="job-body">
         <h3>Universidad Autónoma de Ciudad Juárez</h3>
-        <p class="meta">3 roles · Jan 2018 – May 2021 · Ciudad Juárez, Chihuahua, Mexico</p>
+        <p class="meta">3 roles · 3 yrs 5 mos</p>
         <div class="roles">
           <div class="subrole">
             <h4>Undergraduate Research Assistant (Semiconductors)</h4>
-            <p class="meta">Part-time · Jan 2020 – May 2021</p>
+            <p class="meta">Part-time · Jan 2020 – May 2021 · 1 yr 5 mos<br>Ciudad Juárez, Chihuahua, Mexico · On-site</p>
             <ul>
               <li>Worked with senior researchers on powder and metallic synthesis of semiconductor materials.</li>
               <li>Performed X-ray diffraction (XRD) analysis and I–V measurements to characterize semiconductor samples.</li>
               <li>Helped fabricate nanofilms by sputtering, PVD, CVD, and ALD.</li>
             </ul>
+            <p class="job-tags"><span class="tag">Engineering</span><span class="tag">Material Selection</span></p>
           </div>
           <div class="subrole">
             <h4>Undergraduate Research Assistant (Ceramics)</h4>
-            <p class="meta">Part-time · Jan 2018 – Jan 2020</p>
+            <p class="meta">Part-time · Jan 2018 – Jan 2020 · 2 yrs 1 mo<br>Juárez, Chihuahua, Mexico</p>
             <ul>
               <li>Operated sintering-forging furnaces and a dilatometer for in-situ viscosity measurements.</li>
               <li>Synthesized ceramic powders and pressed them into pellets for testing.</li>
               <li>Characterized materials with SEM, EDS, and XRD.</li>
             </ul>
+            <p class="job-tags"><span class="tag">Energy Dispersive X-Ray Spectroscopy</span><span class="tag">X-ray Diffraction Analysis</span></p>
           </div>
           <div class="subrole">
             <h4>Undergraduate Research Assistant (Solar Panels)</h4>
-            <p class="meta">Apprenticeship · Jan 2018 – Aug 2018</p>
+            <p class="meta">Apprenticeship · Jan 2018 – Aug 2018 · 8 mos<br>Ciudad Juárez, Chihuahua, Mexico · On-site</p>
             <ul>
               <li>Recovered zinc oxide (ZnO) from spent alkaline batteries for use in dye-sensitized solar cells, chosen for its low toxicity and low cost.</li>
             </ul>
+            <p class="job-tags"><span class="tag">Characterization</span><span class="tag">Solar Energy</span></p>
           </div>
         </div>
       </div>
