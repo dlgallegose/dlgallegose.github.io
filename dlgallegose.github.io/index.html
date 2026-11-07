@@ -287,6 +287,24 @@ ul.task-list li input[type="checkbox"] {
 })();
 </script>
 <script>
+(function () {
+  // "Latest paper" link: switch to the Publications tab and open that paper
+  document.querySelectorAll('.jump').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var tab = document.getElementById('t-publications');
+      var pub = document.getElementById(a.getAttribute('data-open'));
+      if (!tab || !pub) return;
+      e.preventDefault();
+      tab.click();
+      pub.open = true;
+      pub.classList.remove('flash'); void pub.offsetWidth; pub.classList.add('flash');
+      var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelector('.tabs-x').scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    });
+  });
+})();
+</script>
+<script>
 /* A [2,1,1] Kolmogorov-Arnold Network trained in the browser.
    Each edge: phi(z) = w_b * silu(z) + sum_i c_i B_i(z), cubic B-splines on a uniform grid
    (the same edge parameterization used by pykan). Trained by full-batch MSE with Adam or
