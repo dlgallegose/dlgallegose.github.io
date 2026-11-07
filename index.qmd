@@ -1,20 +1,21 @@
 ---
-pagetitle: "Damian Gallegos"
+pagetitle: "Damian L. Gallegos-Espinoza"
 ---
 
 ::: {.site}
 
 ::: {.masthead}
-::: {.who}
 ```{=html}
 <div class="idrow">
   <img class="portrait" src="images/headshot.jpg" alt="Headshot of Damian Gallegos">
   <div class="id-text">
-    <span class="name">Damian L. Gallegos Espinoza</span>
+    <span class="name">Damian L. Gallegos-Espinoza</span>
     <span class="role">Ph.D. Student in Computer Science · The University of Texas at El Paso</span>
   </div>
 </div>
 ```
+
+::: {.who}
 
 I study how neural networks handle uncertainty: how confident they are, and how
 wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KANs).
@@ -58,14 +59,21 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
     <span class="kan-stats" aria-live="polite"><span id="kan-opt">untrained</span> · step <b id="kan-step">0</b> · loss <b id="kan-loss">–</b></span>
   </div>
   <svg id="kan-net" viewBox="0 0 360 236" role="img" aria-label="KAN diagram: inputs x and y feed one hidden node, which feeds the output. Each edge shows the curve it has learned."></svg>
-  <svg id="kan-loss-svg" viewBox="0 0 360 92" role="img" aria-label="Training loss on a log scale"></svg>
+  <svg id="kan-loss-svg" viewBox="0 0 360 72" role="img" aria-label="Training loss on a log scale"></svg>
   <p class="kan-formula" id="kan-formula" aria-live="polite">Target: f(x, y) = exp(sin(πx) + y²)</p>
   <div class="kan-btns">
     <button class="btn-x sm" data-opt="adam">Train with Adam</button>
     <button class="btn-x sm" data-opt="lbfgs">Train with L-BFGS → Adam</button>
     <button class="btn-x sm ghost" data-opt="reset">Reset</button>
   </div>
-  <figcaption>A [2, 1, 1] Kolmogorov-Arnold Network trained on 200 samples of f(x, y) = exp(sin(πx) + y²). Each edge learns a 1-D spline; after training, each edge is matched to a formula and the whole function is read back.<br><span class="kan-note">Toy example for illustration, not results from my papers.</span></figcaption>
+  <figcaption>
+    <ul class="kan-points">
+      <li>A [2, 1, 1] Kolmogorov-Arnold Network trained on 200 samples of f(x, y) = exp(sin(πx) + y²).</li>
+      <li>Each edge learns a 1-D spline; the boxes show the curves as they train.</li>
+      <li>After training, each edge is matched to a formula and the whole function is read back.</li>
+    </ul>
+    <span class="kan-note">Toy example for illustration, not results from my papers.</span>
+  </figcaption>
 </figure>
 ```
 :::

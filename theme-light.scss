@@ -457,3 +457,16 @@ html.tabs-on .tab-x:not([aria-selected="true"]):hover { color: var(--blue); }
   .now-val .btn-x.sm { margin: 4px 6px 0 0; }
 }
 .now-val .nb { white-space: nowrap; }
+
+/* v10: name on one line, demo a bit lower, bullet caption */
+.id-text .name { white-space: nowrap; font-size: clamp(1.7rem, 2.5vw, 2.35rem); }
+@media (max-width: 640px) { .id-text .name { white-space: normal; font-size: 1.7rem; } }
+@media (min-width: 1001px) { .kan { margin-top: 28px; } }
+.kan-points { margin: 0 0 6px; padding-left: 1.1em; }
+.kan-points li { margin-bottom: 3px; }
+.kan-points li::marker { color: var(--blue); }
+/* v11: name row spans the full header; demo starts below it */
+.masthead > .idrow, .masthead > p:has(> .idrow) { grid-column: 1 / -1; margin-bottom: 4px; }
+.masthead .kan { margin-top: 0; }
+.id-text .name { font-size: clamp(1.9rem, 3.4vw, 2.9rem); }
+.masthead { row-gap: 18px; }
