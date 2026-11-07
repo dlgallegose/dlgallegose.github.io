@@ -409,3 +409,22 @@ html.tabs-on .tab-x:not([aria-selected="true"]):hover { color: var(--blue); }
 .skill-lbl { padding-top: 0; font-size: 0.68rem; letter-spacing: 0.1em; }
 .skillset .skills { gap: 6px; }
 .skillset .tag { font-size: 0.8rem; padding: 3px 9px; }
+
+/* v7: two-column masthead; photo sits beside the name, everything else spans the left column */
+.masthead { grid-template-columns: minmax(0, 1fr) 390px; gap: 40px; align-items: start; }
+.idrow { display: flex; gap: 22px; align-items: center; margin-bottom: 14px; }
+.idrow .portrait { width: 112px; height: 136px; flex: none; }
+.id-text .role { margin-bottom: 0; }
+@media (max-width: 1000px) { .masthead { grid-template-columns: 1fr; } .kan { grid-column: auto; } }
+@media (max-width: 640px) {
+  .masthead { grid-template-columns: 1fr; }
+  .idrow { gap: 14px; }
+  .idrow .portrait { width: 84px; height: 102px; }
+  .id-text .name { font-size: 1.7rem; }
+}
+/* Skills + Now side by side when there's room */
+.side-by-side { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; align-items: start; margin-top: 20px; }
+.side-by-side .skillset, .side-by-side .now { margin-top: 0; }
+@media (max-width: 760px) { .side-by-side { grid-template-columns: 1fr; } }
+.loss-hint { font-family: var(--mono); font-size: 9px; fill: var(--muted); }
+@media (max-width: 1000px) { .kan { max-width: 560px; width: 100%; justify-self: center; } }

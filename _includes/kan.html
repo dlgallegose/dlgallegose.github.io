@@ -338,9 +338,11 @@
     var t = lel('text', { x: LP - 4, y: y + 3, 'text-anchor': 'end', class: 'llbl' }); t.textContent = '1e' + p;
   });
   var lossPath = lel('path', { class: 'lcurve' });
+  var lossHint = lel('text', { x: (LP + LW) / 2, y: LH / 2 + 2, 'text-anchor': 'middle', class: 'loss-hint' }); lossHint.textContent = 'Press Train to start';
   var lossTag = lel('text', { x: LW - 4, y: LH - 2, 'text-anchor': 'end', class: 'llbl' }); lossTag.textContent = 'training loss (MSE, log scale)';
   var losses = [], totalSteps = ADAM_STEPS;
   function drawLoss() {
+    lossHint.style.display = losses.length ? 'none' : '';
     if (!losses.length) { lossPath.setAttribute('d', ''); return; }
     var d = losses.map(function (L, i) {
       var x = LP + (LW - 4 - LP) * i / Math.max(totalSteps - 1, 1);

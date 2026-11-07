@@ -4,6 +4,7 @@ project:
 website:
   title: "Damian Gallegos"
   favicon: images/favicon.png
+  search: false
   page-navigation: false
   navbar:
     right:
