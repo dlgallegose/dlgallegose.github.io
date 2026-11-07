@@ -428,3 +428,32 @@ html.tabs-on .tab-x:not([aria-selected="true"]):hover { color: var(--blue); }
 @media (max-width: 760px) { .side-by-side { grid-template-columns: 1fr; } }
 .loss-hint { font-family: var(--mono); font-size: 9px; fill: var(--muted); }
 @media (max-width: 1000px) { .kan { max-width: 560px; width: 100%; justify-self: center; } }
+
+/* v8: skills full width, Now box as a 3-column strip below */
+.side-by-side { display: block; }
+.side-by-side .now { margin-top: 18px; }
+.now { display: grid; grid-template-columns: 1.4fr 1fr 1fr; column-gap: 20px; padding: 12px 16px 12px; }
+.now-lbl { grid-column: 1 / -1; margin-bottom: 6px; }
+.now-item { grid-template-columns: 1fr; gap: 3px; border-top: 0; padding: 0; font-size: 0.9rem; line-height: 1.45; }
+.now-item + .now-item { border-left: 1px solid var(--rule); padding-left: 18px; }
+.now-key { padding-top: 0; }
+.now-val .btn-x.sm { margin: 4px 4px 0 0; }
+.now-val .jump { font-size: 0.95rem; }
+@media (max-width: 760px) {
+  .now { grid-template-columns: 1fr; row-gap: 10px; }
+  .now-item + .now-item { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 10px; }
+}
+
+/* v9: Now box = full-width rows, one line each */
+.now { display: block; padding: 12px 16px 6px; }
+.now-lbl { margin-bottom: 2px; }
+.now-item { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--rule); font-size: 0.92rem; }
+.now-item + .now-item { border-left: 0; padding-left: 0; }
+.now-lbl + .now-item { border-top: 0; }
+.now-val .btn-x.sm { margin: 0 0 0 6px; vertical-align: 1px; }
+.now-val .jump { font-size: inherit; }
+@media (max-width: 640px) {
+  .now-item { grid-template-columns: 1fr; gap: 2px; }
+  .now-val .btn-x.sm { margin: 4px 6px 0 0; }
+}
+.now-val .nb { white-space: nowrap; }

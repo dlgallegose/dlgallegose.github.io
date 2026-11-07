@@ -36,8 +36,7 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
   <span class="now-lbl">Now</span>
   <div class="now-item">
     <span class="now-key">Latest paper</span>
-    <span class="now-val"><a href="#publications" class="jump" data-open="pub-aos">Adaptive Optimizer Sequencing for KANs</a>, <span class="venue">MICAI 2026</span>
-      <a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a> <a class="btn-x sm" href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks"><i class="bi bi-github"></i> Code</a></span>
+    <span class="now-val"><a href="#publications" class="jump" data-open="pub-aos">Adaptive Optimizer Sequencing for KANs</a>, <span class="venue">MICAI 2026</span> <span class="nb"><a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a><a class="btn-x sm" href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks"><i class="bi bi-github"></i> Code</a></span></span>
   </div>
   <div class="now-item">
     <span class="now-key">Working on</span>
@@ -45,7 +44,7 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
   </div>
   <div class="now-item">
     <span class="now-key">Teaching</span>
-    <span class="now-val">CS 4381/5381 Cross-Platform App Dev., Fall 2026</span>
+    <span class="now-val">CS 4381/5381 Cross-Platform App Development, Fall 2026</span>
   </div>
 </div>
 </div>
@@ -59,7 +58,7 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
     <span class="kan-stats" aria-live="polite"><span id="kan-opt">untrained</span> · step <b id="kan-step">0</b> · loss <b id="kan-loss">–</b></span>
   </div>
   <svg id="kan-net" viewBox="0 0 360 236" role="img" aria-label="KAN diagram: inputs x and y feed one hidden node, which feeds the output. Each edge shows the curve it has learned."></svg>
-  <svg id="kan-loss-svg" viewBox="0 0 360 64" role="img" aria-label="Training loss on a log scale"></svg>
+  <svg id="kan-loss-svg" viewBox="0 0 360 92" role="img" aria-label="Training loss on a log scale"></svg>
   <p class="kan-formula" id="kan-formula" aria-live="polite">Target: f(x, y) = exp(sin(πx) + y²)</p>
   <div class="kan-btns">
     <button class="btn-x sm" data-opt="adam">Train with Adam</button>
