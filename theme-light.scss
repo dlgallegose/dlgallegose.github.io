@@ -470,3 +470,20 @@ html.tabs-on .tab-x:not([aria-selected="true"]):hover { color: var(--blue); }
 .masthead .kan { margin-top: 0; }
 .id-text .name { font-size: clamp(1.9rem, 3.4vw, 2.9rem); }
 .masthead { row-gap: 18px; }
+/* v12: buttons in the name row, right side */
+.idrow { flex-wrap: wrap; }
+.idrow .actions { margin: 0 0 0 auto; align-self: center; }
+.who > p:first-child { margin-top: 0; }
+@media (max-width: 1000px) {
+  .idrow .actions { margin: 4px 0 0; flex-basis: 100%; }
+}
+.id-text .actions { margin: 12px 0 0; }
+.idrow { flex-wrap: nowrap; }
+@media (max-width: 640px) { .idrow { flex-wrap: wrap; } }
+/* v13: demo starts beside the title/buttons (below the name's top) */
+@media (min-width: 1001px) {
+  .masthead > .idrow, .masthead > p:has(> .idrow) { grid-column: 1; grid-row: 1; }
+  .masthead > .who { grid-column: 1; grid-row: 2; }
+  .masthead > .kan { grid-column: 2; grid-row: 1 / span 2; margin-top: 44px; }
+}
+.id-text .name { font-size: clamp(1.9rem, 3vw, 2.4rem); } .id-text { min-width: 0; }

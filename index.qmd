@@ -11,6 +11,12 @@ pagetitle: "Damian L. Gallegos-Espinoza"
   <div class="id-text">
     <span class="name">Damian L. Gallegos-Espinoza</span>
     <span class="role">Ph.D. Student in Computer Science · The University of Texas at El Paso</span>
+  <div class="actions">
+    <a class="btn-x primary" href="files/cv.pdf"><i class="bi bi-file-earmark-text"></i> CV</a>
+    <button class="btn-x copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address"><i class="bi bi-envelope"></i> <span class="copy-label">Email</span></button>
+    <a class="btn-x" href="https://github.com/dlgallegose"><i class="bi bi-github"></i> GitHub</a>
+    <a class="btn-x" href="https://orcid.org/0009-0002-8351-9977"><i class="bi bi-person-vcard"></i> ORCID</a>
+  </div>
   </div>
 </div>
 ```
@@ -21,12 +27,6 @@ I study how neural networks handle uncertainty: how confident they are, and how
 wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KANs).
 
 ```{=html}
-<div class="actions">
-  <a class="btn-x primary" href="files/cv.pdf"><i class="bi bi-file-earmark-text"></i> CV</a>
-  <button class="btn-x copy-email" data-email="dlgallegose@miners.utep.edu" title="Copy email address"><i class="bi bi-envelope"></i> <span class="copy-label">Email</span></button>
-  <a class="btn-x" href="https://github.com/dlgallegose"><i class="bi bi-github"></i> GitHub</a>
-  <a class="btn-x" href="https://orcid.org/0009-0002-8351-9977"><i class="bi bi-person-vcard"></i> ORCID</a>
-</div>
 <div class="side-by-side">
 <div class="skillset" aria-label="Skills">
   <div class="skill-row"><span class="skill-lbl">ML</span><div class="skills"><span class="tag">Uncertainty quantification</span><span class="tag">Probabilistic modeling</span><span class="tag">Interpretable ML</span><span class="tag">Federated learning</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">scikit-learn</span></div></div>
