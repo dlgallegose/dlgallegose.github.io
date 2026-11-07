@@ -22,8 +22,26 @@ wrong they're likely to be. Most of my work is on Kolmogorov-Arnold Networks (KA
   <a class="btn-x" href="https://github.com/dlgallegose"><i class="bi bi-github"></i> GitHub</a>
   <a class="btn-x" href="https://orcid.org/0009-0002-8351-9977"><i class="bi bi-person-vcard"></i> ORCID</a>
 </div>
-<div class="skills" aria-label="Skills">
-  <span class="tag">PyTorch</span><span class="tag">Julia</span><span class="tag">Python</span><span class="tag">Uncertainty quantification</span><span class="tag">L-BFGS / second-order optimization</span><span class="tag">Hessian analysis</span><span class="tag">Federated learning</span><span class="tag">SQL</span><span class="tag">Dart / Flutter</span>
+<div class="skillset" aria-label="Skills">
+  <div class="skill-row"><span class="skill-lbl">ML</span><div class="skills"><span class="tag">Uncertainty quantification</span><span class="tag">Probabilistic modeling</span><span class="tag">Interpretable ML</span><span class="tag">Federated learning</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">scikit-learn</span></div></div>
+  <div class="skill-row"><span class="skill-lbl">Optimization</span><div class="skills"><span class="tag">L-BFGS / second-order methods</span><span class="tag">Hessian analysis</span><span class="tag">Optimizer scheduling</span></div></div>
+  <div class="skill-row"><span class="skill-lbl">Tools</span><div class="skills"><span class="tag">Python</span><span class="tag">Julia</span><span class="tag">NumPy</span><span class="tag">SQL</span><span class="tag">Java</span><span class="tag">Dart / Flutter</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">LaTeX</span></div></div>
+</div>
+<div class="now">
+  <span class="now-lbl">Now</span>
+  <div class="now-item">
+    <span class="now-key">Latest paper</span>
+    <span class="now-val"><a href="#publications" class="jump" data-open="pub-aos">Adaptive Optimizer Sequencing for KANs</a>, MICAI 2026
+      <a class="btn-x sm" href="https://doi.org/10.1007/978-3-032-44176-8_14">DOI</a> <a class="btn-x sm" href="https://github.com/dlgallegose/Adaptive-Optimizer-Sequencing-for-Kolmogorov-Arnold-Networks"><i class="bi bi-github"></i> Code</a></span>
+  </div>
+  <div class="now-item">
+    <span class="now-key">Working on</span>
+    <span class="now-val">Error and confidence estimates for KANs</span>
+  </div>
+  <div class="now-item">
+    <span class="now-key">Teaching</span>
+    <span class="now-val">CS 4381/5381 Cross-Platform App Dev., Fall 2026</span>
+  </div>
 </div>
 ```
 :::
@@ -95,7 +113,7 @@ expected error.
 ```{=html}
 <p class="hint">Click a paper to see authors and links.</p>
 <div class="pubs">
-  <details class="pub">
+  <details class="pub" id="pub-aos">
     <summary><span class="pub-year">2026</span><span class="pub-main"><span class="pub-title">Adaptive Optimizer Sequencing for Kolmogorov-Arnold Networks</span><span class="pub-venue">MICAI 2026 · Springer LNAI 17149</span></span><i class="bi bi-chevron-down chev"></i></summary>
     <div class="pub-more">
       <p><strong>D. L. Gallegos Espinoza</strong>, Y. I. Guel, M. N. Sojib, M. Ceberio</p>
@@ -237,26 +255,35 @@ expected error.
     <article class="job">
       <div class="logo">UACJ</div>
       <div class="job-body">
-        <h3>Research Assistant Intern</h3>
-        <p class="org">Universidad Autónoma de Ciudad Juárez</p>
-        <p class="meta">Aug 2020 – May 2021 · Ciudad Juárez</p>
-        <ul>
-          <li>Semiconductor powder and metallic synthesis; XRD and I–V characterization.</li>
-          <li>Nanofilm fabrication by sputtering, PVD, CVD and ALD.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="job">
-      <div class="logo">UACJ</div>
-      <div class="job-body">
-        <h3>Undergraduate Research Assistant</h3>
-        <p class="org">Universidad Autónoma de Ciudad Juárez</p>
-        <p class="meta">Jan 2018 – Jan 2020 · Ciudad Juárez</p>
-        <ul>
-          <li>In-situ viscosity measurement in sintering-forging furnaces and dilatometry; ceramic powder synthesis; SEM/EDS/XRD analysis.</li>
-          <li>Battery-recycling project (Jan – Aug 2018): recovering ZnO from spent batteries for dye-sensitized solar cells.</li>
-        </ul>
+        <h3>Universidad Autónoma de Ciudad Juárez</h3>
+        <p class="meta">3 roles · Jan 2018 – May 2021 · Ciudad Juárez, Chihuahua, Mexico</p>
+        <div class="roles">
+          <div class="subrole">
+            <h4>Undergraduate Research Assistant (Semiconductors)</h4>
+            <p class="meta">Part-time · Jan 2020 – May 2021</p>
+            <ul>
+              <li>Worked with senior researchers on powder and metallic synthesis of semiconductor materials.</li>
+              <li>Performed X-ray diffraction (XRD) analysis and I–V measurements to characterize semiconductor samples.</li>
+              <li>Helped fabricate nanofilms by sputtering, PVD, CVD, and ALD.</li>
+            </ul>
+          </div>
+          <div class="subrole">
+            <h4>Undergraduate Research Assistant (Ceramics)</h4>
+            <p class="meta">Part-time · Jan 2018 – Jan 2020</p>
+            <ul>
+              <li>Operated sintering-forging furnaces and a dilatometer for in-situ viscosity measurements.</li>
+              <li>Synthesized ceramic powders and pressed them into pellets for testing.</li>
+              <li>Characterized materials with SEM, EDS, and XRD.</li>
+            </ul>
+          </div>
+          <div class="subrole">
+            <h4>Undergraduate Research Assistant (Solar Panels)</h4>
+            <p class="meta">Apprenticeship · Jan 2018 – Aug 2018</p>
+            <ul>
+              <li>Recovered zinc oxide (ZnO) from spent alkaline batteries for use in dye-sensitized solar cells, chosen for its low toxicity and low cost.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </article>
   </details>

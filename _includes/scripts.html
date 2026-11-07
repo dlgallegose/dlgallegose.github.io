@@ -75,3 +75,21 @@
 
 })();
 </script>
+<script>
+(function () {
+  // "Latest paper" link: switch to the Publications tab and open that paper
+  document.querySelectorAll('.jump').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var tab = document.getElementById('t-publications');
+      var pub = document.getElementById(a.getAttribute('data-open'));
+      if (!tab || !pub) return;
+      e.preventDefault();
+      tab.click();
+      pub.open = true;
+      pub.classList.remove('flash'); void pub.offsetWidth; pub.classList.add('flash');
+      var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelector('.tabs-x').scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    });
+  });
+})();
+</script>
